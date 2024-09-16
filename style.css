@@ -1,0 +1,28 @@
+        /* Custom styles for softer colors and improved layout */
+        body {
+          font-family: 'Arial', sans-serif;
+          background-color: #f4f4f9;
+      }
+      header {
+          background-color: #82c7a5;
+          padding: 60px 0;
+          color: #fff;
+      }
+      .nav-link {
+          color: #fff !important;
+      }
+      section {
+          padding: 60px 0;
+      }
+      section.bg-light {
+          background-color: #e8f6ef;
+      }
+      footer {
+          background-color: #354f52;
+          color: #fff;
+          padding: 30px 0;
+      }
+      .btn-custom {
+          background-color: #54a489;
+          color: #fff;
+      }

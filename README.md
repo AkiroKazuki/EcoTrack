@@ -1,4 +1,4 @@
 clone
 open terminal
-jalanin code "npm install"
+'npm install'
 untuk download library bootstrap 5.3.3
