@@ -1,2 +1,4 @@
-#ignore all node modules file (bootstrap)
-node_modules
+#ignore all node modules file
+/node_modules
+/.github
+/vendor
