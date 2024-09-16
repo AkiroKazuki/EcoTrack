@@ -1,2 +1,2 @@
 #ignore all node modules file (bootstrap)
-node_modules/
+node_modules
