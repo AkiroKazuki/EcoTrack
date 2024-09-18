@@ -1,3 +1,10 @@
+:root {
+  --hijaumuda: #56a65d;
+  --hijautua: #456648;
+  --putihabu: #d8d5b7;
+  --putih: #f5f1df;
+}
+
 /* Custom styles for softer colors and improved layout */
 body {
   font-family: "Arial", sans-serif;
@@ -9,8 +16,61 @@ body {
   padding-top: 0;
 }
 
-.hero {
-  background-image: url(image/forest.svg);
+.homepage {
+  min-height: 100vh;
+}
+
+.homepage .navbar-brand {
+  font-size: 50px;
+  color: var(--putihabu);
+  -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--hijaumuda);
+}
+
+.homepage .nav-item .btn {
+  background-color: var(--hijaumuda);
+  color: var(--putihabu);
+  border: none;
+  border-radius: 10px;
+}
+
+.homepage .nav-item .btn:hover {
+  background-color: var(--putihabu);
+  color: var(--hijaumuda);
+}
+
+.homepage .sign-in:hover {
+  opacity: 0.5;
+}
+
+.homepage .sign-in {
+  color: var(--hijautua) !important;
+}
+
+.homepage .text {
+  margin-top: 8%;
+  color: var(--putihabu);
+  letter-spacing: 5px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--hijaumuda);
+}
+
+.scroll {
+  position: absolute;
+  bottom: 0;
+  text-decoration: none;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  align-items: center;
+  text-align: center;
+  color: rgba(255, 255, 255, 0);
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: var(--putihabu);
+}
+
+.scroll h1 {
+  rotate: 90deg;
 }
 
 header {
