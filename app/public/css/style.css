@@ -14,10 +14,9 @@ body {
 #homepage {
   margin-top: 0;
   padding-top: 0;
-}
-
-.homepage {
   min-height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 
 .homepage .navbar-brand {
@@ -30,8 +29,6 @@ body {
 .homepage .nav-item .btn {
   background-color: var(--hijaumuda);
   color: var(--putihabu);
-  border: none;
-  border-radius: 10px;
 }
 
 .homepage .nav-item .btn:hover {
@@ -56,21 +53,16 @@ body {
 }
 
 .scroll {
-  position: absolute;
-  bottom: 0;
-  text-decoration: none;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  align-items: center;
-  text-align: center;
   color: rgba(255, 255, 255, 0);
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: var(--putihabu);
 }
 
-.scroll h1 {
-  rotate: 90deg;
+.scroll:hover {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--hijaumuda);
 }
 
 header {
