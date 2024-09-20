@@ -20,18 +20,18 @@ body {
 }
 
 .homepage .navbar-brand {
-  font-size: 50px;
+  font-size: clamp(2rem, 10vw, 4rem);
   color: var(--putihabu);
   -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: var(--hijaumuda);
 }
 
-.homepage .nav-item .btn {
+.homepage .join {
   background-color: var(--hijaumuda);
   color: var(--putihabu);
 }
 
-.homepage .nav-item .btn:hover {
+.homepage .join:hover {
   background-color: var(--putihabu);
   color: var(--hijaumuda);
 }
