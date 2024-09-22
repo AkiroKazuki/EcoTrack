@@ -36,16 +36,15 @@ body {
   color: var(--hijaulime) !important;
 }
 
-.homepage .offcanvas {
-  width: 50vw;
-}
-
-.homepage .text {
-  margin-top: 8%;
+.homepage .title .text h1 {
+  font-size: 4rem !important;
+  margin-top: 30vh;
+  padding: 0 20vw;
   color: var(--hijaumuda);
   letter-spacing: 5px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--hijaumuda);
+  text-shadow: 2px 2px 2px var(--hijaumuda), -3px -3px 2px rgba(105, 100, 100, 0.5);
 }
 
 .scroll {
@@ -53,7 +52,7 @@ body {
   left: 50%;
   color: rgba(255, 255, 255, 0);
   -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: var(--putihabu);
+  -webkit-text-stroke-color: var(--hijaumuda);
 }
 
 .scroll:hover {
