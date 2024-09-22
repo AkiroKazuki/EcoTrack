@@ -1,13 +1,15 @@
 :root {
-  --hijaumuda: #56a65d;
-  --hijautua: #456648;
+  --hijaumuda: #d8efdd;
+  --hijaulime: #7ed957;
+  --abugelap: #232e26;
+  --abuterang: #666f69;
   --putihabu: #d8d5b7;
   --putih: #f5f1df;
 }
 
 /* Custom styles for softer colors and improved layout */
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "calibri", sans-serif;
   background-color: #f4f4f9;
 }
 
@@ -20,33 +22,27 @@ body {
 }
 
 .homepage .navbar-brand {
-  font-size: clamp(2rem, 10vw, 4rem);
-  color: var(--putihabu);
-  -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: var(--hijaumuda);
-}
-
-.homepage .join {
-  background-color: var(--hijaumuda);
-  color: var(--putihabu);
-}
-
-.homepage .join:hover {
-  background-color: var(--putihabu);
+  font-size: clamp(2rem, 10vw, 3rem);
   color: var(--hijaumuda);
+  /* -webkit-text-stroke-width: 1.5px;
+  -webkit-text-stroke-color: var(--hijaumuda); */
 }
 
-.homepage .sign-in:hover {
-  opacity: 0.5;
+.homepage .navbar ul li a {
+  color: var(--hijaumuda) !important;
 }
 
-.homepage .sign-in {
-  color: var(--hijautua) !important;
+.homepage .navbar ul li a:hover {
+  color: var(--hijaulime) !important;
+}
+
+.homepage .offcanvas {
+  width: 50vw;
 }
 
 .homepage .text {
   margin-top: 8%;
-  color: var(--putihabu);
+  color: var(--hijaumuda);
   letter-spacing: 5px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--hijaumuda);
@@ -88,7 +84,6 @@ footer {
   background-color: #54a489;
   color: #fff;
 }
-
 
 .list-group-item {
   display: flex;
