@@ -40,7 +40,7 @@ body {
 .homepage .navbar {
   position: relative;
   z-index: 1;
-  height: 10%;
+  height: 10vh;
 }
 
 .homepage .navbar::before {
@@ -56,7 +56,7 @@ body {
 }
 
 .homepage .navbar-brand {
-  font-size: clamp(2rem, 10vw, 3rem);
+  font-size: 2em;
   color: var(--hijaumuda);
   /* -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: var(--hijaumuda); */

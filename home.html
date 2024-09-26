@@ -12,26 +12,44 @@
   <body>
     <!-- homepage -->
     <section id="homepage" class="homepage ">
-      <nav class="navbar navbar-expand-lg p-3"> 
+      <nav class="navbar navbar-expand-lg align-items-center"> 
         <div class="container">
           <h1 class="navbar-brand fw-bold">Nama Web</h1>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+          <ul class="nav d-none d-lg-flex fs-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Who we are</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">nama inovasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section5">Get Involved</a>
+            </li>
+          </ul>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel" style="width: 50vw;">
-            <ul class="nav d-flex justify-content-center fs-5">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Who we are</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">nama inovasi</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#section5">Get Involved</a>
-              </li>
-            </ul>
+          <!-- offcanvas -->
+          <div class="offcanvas offcanvas-start text-bg-dark" tabindex="-1" id="offcanvasDark" aria-labelledby="offcanvasDarkLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title fs-1" id="offcanvasDarkLabel" style="color: var(--hijaulime);">Navigation</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="nav d-lg-none d-md-flex flex-column fs-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Who we are</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">nama inovasi</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section5">Get Involved</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="form-check form-switch fs-2">
+          <div class="form-check form-switch fs-4">
             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
             <label class="form-check-label" for="flexSwitchCheckDefault"></label>
           </div>
