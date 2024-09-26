@@ -12,21 +12,11 @@
   <body>
     <!-- homepage -->
     <section id="homepage" class="homepage ">
-      <nav class="navbar navbar-expand-lg align-items-center"> 
+      <nav class="navbar navbar-expand-lg"> 
         <div class="container">
           <h1 class="navbar-brand fw-bold">Nama Web</h1>
-          <ul class="nav d-none d-lg-flex fs-5">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Who we are</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">nama inovasi</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#section5">Get Involved</a>
-            </li>
-          </ul>
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
+          <!-- toggler -->
+          <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- offcanvas -->
@@ -49,28 +39,42 @@
               </ul>
             </div>
           </div>
-          <div class="form-check form-switch fs-4">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+          <ul class="nav d-none d-lg-flex fs-5">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Who we are</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">nama inovasi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#section5">Get Involved</a>
+            </li>
+          </ul>
+          <!-- switch -->
+          <div class="form-check form-switch fs-4 ms-5">
+            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="cursor: pointer;">
             <label class="form-check-label" for="flexSwitchCheckDefault"></label>
           </div>
           </div>
         </div>
       </nav>
+      <!-- isi content -->
       <div class="container-homepage text-center" style="box-sizing: boder-box;">
         <div class="row align-items-start">
-          <div class="title col-lg-8" style="padding: 20vh 5vw 0;">
-            <div class="text text-center">
+          <div class="title col-lg-7" style="padding:5em 10vw 0;">
+            <div class="text text-center pt-lg-5 mt-lg-3">
               <h1>Protecting Nature Through <span style="color: var(--hijaulime);  -webkit-text-stroke-width: 0px">AI</span></h1>
               <a href="#section1" type="button" class="btn mt-3 fs-5 fw-bold">Learn More</a>
             </div>
           </div>
-          <div class="description col-lg-2 d-flex flex-column justify-content-between" style="margin: 8vh 8vw; height: 70vh;">
-            <div class="row description text-start" style="color: var(--putih);">
+          <!-- aside -->
+          <div class="description col-lg-3 d-md-flex flex-lg-column flex-md-row d-none justify-content-lg-between justify-content-md-center flex-wrap ms-md-0 ms-4" style="margin-top: 8vh; height: 30em;">
+            <div class="text-start" style="color: var(--putih);width: 20em;">
               <div class="deforestation d-flex">
                 <span class="icon me-2">
                   <img src="../Web-desain-invofest/app/public/icon/deforestation-icon.png" alt="">
                 </span>
-                <p>Learn how AI is being used to detect and halt illegal deforestation in the Amazon rain forest.
+                <p>Learn how AI is being used to detect and halt illegal deforestation in the Amazon rain forest. <br>
                   <a class="icon-link icon-link-hover link-light text-decoration-none" href="#section4">
                     Learn more
                     <i class="bi bi-arrow-bar-right"></i>
@@ -78,12 +82,12 @@
                 </p>
               </div>
             </div>
-            <div class="row description text-start" style="color: var(--putih);">
+            <div class="text-start" style="color: var(--putih); width: 20em;">
               <div class="river d-flex">
                 <span class="icon me-2">
                   <img src="../Web-desain-invofest/app/public/icon/river-icon.png" alt="">
                 </span>
-                <p>Discover how AI-powered satellites monitor water quality in lakes and rivers across Africa.  
+                <p>Discover how AI-powered satellites monitor water quality in lakes and rivers across Africa. <br>
                   <a class="icon-link icon-link-hover link-light text-decoration-none" href="#section4">
                     Learn more
                     <i class="bi bi-arrow-bar-right"></i>
@@ -91,12 +95,12 @@
                 </p>
               </div>
             </div>
-            <div class="row description text-start" style="color: var(--putih);">
+            <div class="text-start" style="color: var(--putih); width: 20em;">
               <div class="reforestation d-flex">
                 <span class="icon me-2">
                   <img src="../Web-desain-invofest/app/public/icon/reforestation-icon.png" alt="">
                 </span>
-                <p>Explore the success stories of AI-led reforestation efforts in Indonesia, where satellite data helps track tree growth and forest recovery.
+                <p>Explore the success stories of AI-led reforestation efforts in Indonesia, where satellite data helps track tree growth and forest recovery. <br>
                   <a class="icon-link icon-link-hover link-light text-decoration-none" href="#section4">
                     Learn more
                     <i class="bi bi-arrow-bar-right"></i>
