@@ -24,14 +24,6 @@ body {
   z-index: 1;
 }
 
-#about-us {
-  margin-top: 0;
-  padding-top: 0;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-}
-
 #homepage::before {
   content: "";
   position: absolute;
@@ -86,14 +78,15 @@ body {
   text-shadow: 2px 2px 2px var(--hijaumuda), -3px -3px 2px rgba(105, 100, 100, 0.5);
 }
 
-.text .btn {
+.container-homepage .text .btn {
   border-radius: 25px;
   padding: 1vw 3vw;
   background-color: var(--abugelap);
   color: var(--hijaulime);
+  transition: 0.5s ease;
 }
 
-.text .btn:hover {
+.container-homepage .text .btn:hover {
   background-color: var(--hijaulime);
   color: var(--abugelap);
 }
@@ -179,10 +172,20 @@ footer {
   margin: 0;
 }
 
+#about-us {
+  margin-top: 0;
+  padding-top: 0;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+#about-us .navbar .bi:hover {
+  color: var(--hijaulime);
+}
+
 #about-us .indicators {
   margin-left: 37.5vw;
-  /* max-width: 25vw; */
-  /* min-width: calc(720px / 4); */
   width: calc(720px / 4);
   display: flex;
   align-items: center;
@@ -195,6 +198,19 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#about-us .indicators .indicator-button:hover,
+.indicator-button.clicked {
+  color: var(--hijaulime) !important;
+  transform: scale(1.1);
+}
+
+#about-us .indicators .indicator-button:hover button,
+.indicator-button button.clicked {
+  background-color: var(--hijaulime) !important;
 }
 
 #about-us .indicators button {
