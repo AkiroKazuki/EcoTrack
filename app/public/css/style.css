@@ -20,7 +20,19 @@
   opacity: 0;
   visibility: hidden; /* Menyembunyikan spinner */
 }
-
+.top-50 {
+  top: 50%;
+}
+.start-50 {
+  left: 50%;
+}
+.translate-middle {
+  transform:translate(-50%, -50%);
+}
+.icon-small {
+  width: 4.2rem;
+  height: auto;
+}
 
 /* Custom styles for softer colors and improved layout */
 body {
@@ -203,19 +215,29 @@ footer {
 }
 
 
-/* testing switch theme */
+/* styles.css */
+
 body {
   background-color: var(--bg-color);
   color: var(--font-color);
   font-family: monospace;
   line-height: 1.5;
 }
+
 [data-theme="dark"] {
-    --primary-color: #9A97F3;
-    --secondary-color: #818cab;
-    --font-color: #e1e1ff;
-    --bg-color: #161625;
-    --heading-color: #818cab;
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+[data-theme="light"] {
+  --primary-color: #4CAF50; /* Ganti dengan warna utama terang */
+  --secondary-color: #e1e1e1; /* Ganti dengan warna sekunder terang */
+  --font-color: #333; /* Ganti dengan warna font terang */
+  --bg-color: #ffffff; /* Ganti dengan warna latar belakang terang */
+  --heading-color: #000; /* Ganti dengan warna heading terang */
 }
 
 .theme-switch {
@@ -227,7 +249,7 @@ body {
 }
 
 .theme-switch input {
-  display:none;
+  display: none;
 }
 
 .slider {
