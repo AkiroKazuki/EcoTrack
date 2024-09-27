@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="app/public/css/style.css" />
   </head>
-  <body>
+  <body id="about-us-page">
     <!-- section -->
     <section id="about-us" class="about-us" style="background-color: var(--abugelap)">
       <nav class="navbar navbar-expand-lg"> 
@@ -31,17 +31,17 @@
       <!-- main -->
        <!-- indicator -->
       <div id="carouselExampleIndicators" class="carousel slide">
-        <div class="indicators d-flex justify-content-between" style="margin-left: 37.5vw; width: 25vw;">
-          <div style="color: var(--hijaumuda);">
+        <div class="indicators d-flex justify-content-between">
+          <div class="indicator-button" style="color: var(--hijaumuda);">
             <p class="text-center">About <br>this web</p>
             <button type="button" class="rounded-circle" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           </div>
-          <div style="color: var(--hijaumuda);">
+          <div class="indicator-button" style="color: var(--hijaumuda);">
             <p class="text-center">Met <br>our team</p>
             <button type="button" 
           class="rounded-circle" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           </div>
-          <div style="color: var(--hijaumuda);">
+          <div class="indicator-button" style="color: var(--hijaumuda);">
             <p class="text-center">Contact <br>us</p>
           <button type="button" 
           class="rounded-circle" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -50,22 +50,26 @@
         <!-- content -->
         <div class="carousel-inner mt-5">
           <div class="carousel-item w-100 active">
-            <div class="row" style="height: 60vh; background-color: red; padding: 5em 0 0 15em;">
-              <div class="col-3">
+            <div class="row" style="height: auto; padding-left: 15em;">
+              <div class="col-lg-3 col-md-12">
                 <div class="rounded-circle" style="width: 200px; height: 200px; background-color: white;"></div>
               </div>
-              <div class="col-7">
+              <div class="text col-lg-7 col-md-12 mt-md-5" style="color: var(--hijaumuda);">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit temporibus, commodi blanditiis accusantium perferendis voluptate vero labore veniam ipsum cumque necessitatibus beatae, recusandae ipsam! Magnam officiis explicabo ipsam! Earum optio architecto quo? Accusantium natus doloremque reprehenderit fuga magnam deserunt quidem, sequi excepturi modi molestiae neque sapiente itaque, nesciunt, aut earum!</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est quisquam nihil officia aperiam veritatis non at praesentium, sunt odit voluptatibus!</p>
               </div>
             </div>
           </div>
           <div class="carousel-item w-100">
-            <div style="height: 60vh; background-color: blue;"></div>
-          </div>
+            <!-- height dibawah jadi auto -->
+            <div class="row" style="height: 50vh; padding-left: 15em; background-color: blue;">
+            </div>
+          </div>        
           <div class="carousel-item w-100">
-            <div style="height: 60vh; background-color: green;"></div>
+            <!-- height dibawah jadi auto -->
+            <div class="row" style="height: 50vh; padding-left: 15em; background-color: green;">
+            </div>
           </div>
-        </div>        
     </section>
     <!-- Footer -->
     <footer id="footer" class="text-center">

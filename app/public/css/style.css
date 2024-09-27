@@ -179,6 +179,50 @@ footer {
   margin: 0;
 }
 
+#about-us .indicators {
+  margin-left: 37.5vw;
+  /* max-width: 25vw; */
+  /* min-width: calc(720px / 4); */
+  width: calc(720px / 4);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#about-us .indicators .indicator-button {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#about-us .indicators button {
+  border: none;
+  background-color: var(--hijaumuda);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+#about-us .indicators::before {
+  content: "";
+  position: absolute;
+  top: 88%;
+  left: 20%;
+  right: -10%;
+  height: 2px;
+  background-color: var(--hijaumuda);
+  z-index: 0;
+}
+
+#about-us .indicators p {
+  width: 80px;
+  z-index: 1;
+}
+
+/* responsif breakpoint */
 @media (max-width: 576px) {
   .how-you-can-help-link:hover,
   .how-you-can-help-link:hover + i {
@@ -195,36 +239,20 @@ footer {
   }
 }
 
-#about-us .indicators button {
-  border: none;
-  background-color: var(--hijaumuda);
-  width: 20px;
-  height: 20px;
-}
-
-#about-us .indicators p {
-  position: relative;
-  right: 40%;
-  top: 10%;
-  width: 80px;
-}
-
-/* #about-us .indicators::before {
-  content: "";
-  top: 0;
-  bottom: 69.5%;
-  left: 40%;
-  position: absolute;
-  width: 3px;
-  height: 57%;
-  background-color: var(--hijaumuda);
-  transform: rotate(90deg);
-  z-index: 99;
-} */
-
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   #about-us nav h1 {
     font-size: 3em !important;
+  }
+
+  #about-us .carousel-item .row {
+    padding: 0 3em 0 10vw !important;
+    text-align: center;
+  }
+
+  #about-us .carousel-item .rounded-circle {
+    width: 300px !important;
+    height: 300px !important;
+    margin: auto;
   }
 }
 
@@ -239,5 +267,15 @@ footer {
 
   #about-us .form-check {
     font-size: 1rem !important;
+  }
+
+  #about-us .carousel-item .rounded-circle {
+    width: 150px !important;
+    height: 150px !important;
+    margin-bottom: 30px;
+  }
+
+  #about-us .indicators {
+    margin-left: 25vw;
   }
 }
