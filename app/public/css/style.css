@@ -8,6 +8,20 @@
   --hitam: #000000;
 }
 
+/* Spinner */
+#spinner {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.hide {
+  opacity: 0;
+  visibility: hidden; /* Menyembunyikan spinner */
+}
+
+
 /* Custom styles for softer colors and improved layout */
 body {
   font-family: "calibri", sans-serif;
