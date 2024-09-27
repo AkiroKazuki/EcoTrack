@@ -195,6 +195,33 @@ footer {
   }
 }
 
+#about-us .indicators button {
+  border: none;
+  background-color: var(--hijaumuda);
+  width: 20px;
+  height: 20px;
+}
+
+#about-us .indicators p {
+  position: relative;
+  right: 40%;
+  top: 10%;
+  width: 80px;
+}
+
+/* #about-us .indicators::before {
+  content: "";
+  top: 0;
+  bottom: 69.5%;
+  left: 40%;
+  position: absolute;
+  width: 3px;
+  height: 57%;
+  background-color: var(--hijaumuda);
+  transform: rotate(90deg);
+  z-index: 99;
+} */
+
 @media (max-width: 768px) {
   #about-us nav h1 {
     font-size: 3em !important;
