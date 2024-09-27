@@ -30,8 +30,8 @@
   transform:translate(-50%, -50%);
 }
 .icon-small {
-  width: 4.2rem;
-  height: auto;
+  width: 4.2rem !important;
+  height: auto !important;
 }
 
 /* Custom styles for softer colors and improved layout */
