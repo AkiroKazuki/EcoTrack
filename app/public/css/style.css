@@ -194,3 +194,23 @@ footer {
     margin-left: auto;
   }
 }
+
+@media (max-width: 768px) {
+  #about-us nav h1 {
+    font-size: 3em !important;
+  }
+}
+
+@media (max-width: 576px) {
+  #about-us nav h1 {
+    font-size: 2em !important;
+  }
+
+  #about-us nav i {
+    font-size: 1.5rem !important;
+  }
+
+  #about-us .form-check {
+    font-size: 1rem !important;
+  }
+}
