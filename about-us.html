@@ -14,7 +14,7 @@
     <section id="about-us" class="about-us" style="background-color: var(--abugelap)">
       <nav class="navbar navbar-expand-lg"> 
         <div class="container">
-          <h1 class="navbar-brand fw-bold text-uppercase mt-3" style="font-size: 4em; "><span class="border-bottom border-success border-5">who</span> we are</h1>
+          <h1 class="navbar-brand fw-bold text-uppercase mt-3" style="font-size: 4em; "><span style="border-bottom: 5px solid var(--hijaulime);">who</span> we are</h1>
           <div class="nav-right d-flex align-items-center">
             <a href="home.html" class="nav-link">
               <i class="bi bi-house-fill fs-1" style="transition: 0.3s ease;"></i>
@@ -92,10 +92,59 @@
             </div>
             </div>
           </div>
-          <div class="carousel-item w-100">
-            <!-- height dibawah jadi auto -->
-            <div class="row" style="height: 50vh; padding-left: 15em; background-color: green;">
-
+          <div class="contact carousel-item w-100">
+            <div class="row" style="height: auto; padding-left: 5em;">
+              <div class="col-lg-7 col-md-12" style="color: var(--hijaumuda);">
+                <h1 class="fw-bold">Send Message</h1>
+                <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                  <strong>Thanks!</strong> Your messege has been sent.
+                  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+                <form name="dode-contact-form">
+                  <div class="row">
+                    <div class="col-lg-6 mb-md-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" required/>
+                    </div>
+                    <div class="col-lg-6 mb-md-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required/>
+                      <div id="emailHelp" class="form-text opacity-50">We'll never share your email with anyone else.</div>
+                    </div>
+                  </div>
+                  <div class=" row mb-3">
+                    <label for="pesan" class="form-label">Messege</label>
+                    <textarea class="form-control message" id="pesan" rows="3" name="pesan" required></textarea>
+                  </div>
+                  <div class="btn button-wrap d-flex">
+                    <button type="submit" class="btn btn-kirim fs-3 fw-bold" style="background-color: var(--hijaulime); color: var(--abugelap); border-radius: 20px;">Submit</button>
+                    <button class="btn btn-primary btn-loading d-none" type="button" disabled>
+                      <span class="spinner-border spinner-border-sm" aria-hidden="true"></span>
+                      <span role="status">Loading...</span>
+                    </button> 
+                  </div>
+                </form>
+              </div>
+              <div class="via col-lg-3 col-md-12 d-flex flex-column justify-content-evenly gap-3 mt-md-5 text-wrap" style="margin-left: 5em;">
+                <div class="row group p-2" style="background-color: var(--abuterang); color: var(--hijaumuda);">
+                  <div class="col-3">
+                    <i class="bi bi-whatsapp fs-1"></i>
+                  </div>
+                  <div class="col-7">
+                    <a href="https://wa.me/6282247552981" class="row text-decoration-none">+6282247552981 (Dode)</a>
+                    <a href="https://wa.me/" class="row text-decoration-none">+6280000000000 (Gung Wah)</a>
+                  </div>
+                </div>
+                <div class="row p-2" style="background-color: var(--abuterang); color: var(--hijaumuda);">
+                  <div class="col-3">
+                    <i class="bi bi-envelope fs-1"></i>
+                  </div>
+                  <div class="email col-7">
+                    <div class="row">dprameshwara@gmail.com (Dode)</div>
+                    <div class="row">dprameshwara@gmail.com (Gung Wah)</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>        

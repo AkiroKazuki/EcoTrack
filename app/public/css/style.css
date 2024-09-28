@@ -180,6 +180,13 @@ footer {
   z-index: 1;
 }
 
+#about-us .navbar-brand {
+  color: var(--abugelap);
+  letter-spacing: 5px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--hijaulime);
+}
+
 #about-us .navbar .bi:hover {
   color: var(--hijaulime);
 }
@@ -246,6 +253,19 @@ footer {
   box-shadow: 0px 0px 19px var(--hijaulime);
 }
 
+#about-us .button-wrap button:hover {
+  background-color: var(--abugelap) !important;
+  color: var(--hijaulime) !important;
+  border: 2px solid var(--hijaulime);
+  opacity: 0.5;
+}
+
+#about-us .contact .form-control {
+  background-color: var(--abuterang);
+  border: none;
+  border-radius: 10px;
+}
+
 /* responsif breakpoint */
 @media (max-width: 850px) {
   #about-us nav h1 {
@@ -272,6 +292,16 @@ footer {
   #about-us .carousel-item .team,
   #about-us .carousel-item .team .dua {
     margin-top: 5vh;
+  }
+
+  #about-us .contact .row,
+  #about-us .contact .row h1 {
+    padding-left: 3em !important;
+    text-align: start;
+  }
+
+  #about-us .contact button {
+    margin-left: 1.5em;
   }
 }
 
@@ -328,5 +358,24 @@ footer {
   #about-us .carousel-item .nama,
   #about-us .carousel-item .sklh {
     font-size: 1rem;
+  }
+
+  #about-us .contact .row,
+  #about-us .contact .row h1 {
+    padding-left: 1em !important;
+    text-align: start;
+  }
+
+  #about-us .contact button {
+    margin-left: 0em;
+  }
+
+  #about-us .contact .via {
+    margin-top: 1em;
+    width: 50vw;
+  }
+
+  #about-us .contact .email {
+    font-size: 0.7rem;
   }
 }
