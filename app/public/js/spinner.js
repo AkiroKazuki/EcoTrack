@@ -9,7 +9,7 @@
                  spinner.classList.add('hide'); // Tambahkan class 'hide' untuk menghilangkan spinner
                  console.log("Spinner hidden");
              }
-         }, 1000); // Delay 1 detik sebelum menyembunyikan spinner
+         }, 400); // Delay 400ms sebelum menyembunyikan spinner
      };
  
      // Panggil hideSpinner ketika semua konten selesai loading

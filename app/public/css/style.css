@@ -215,7 +215,7 @@ footer {
 }
 
 
-/* styles.css */
+/* Light mode dan dark mode */
 
 body {
   background-color: var(--bg-color);
@@ -245,7 +245,7 @@ body {
   height: 34px;
   position: relative;
   width: 60px;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 
 .theme-switch input {
@@ -264,7 +264,7 @@ body {
 }
 
 .slider:before {
-  background: #fff url('https://i.ibb.co/7JfqXxB/sunny.png');
+  background: #fff url('https://img.icons8.com/emoji/48/sun-emoji.png') no-repeat center center;
   bottom: 4px;
   content: "";
   height: 26px;
@@ -280,7 +280,7 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(26px);
-  background: #fff url('https://i.ibb.co/FxzBYR9/night.png');
+  background: #fff url('https://img.icons8.com/emoji/48/new-moon-emoji.png') no-repeat center center;
 }
 
 .slider.round {
