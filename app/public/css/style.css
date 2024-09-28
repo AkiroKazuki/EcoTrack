@@ -203,13 +203,15 @@ footer {
 }
 
 #about-us .indicators .indicator-button:hover,
-.indicator-button.clicked {
+.indicator-button.clicked,
+.indicator-button.active {
   color: var(--hijaulime) !important;
   transform: scale(1.1);
 }
 
 #about-us .indicators .indicator-button:hover button,
-.indicator-button button.clicked {
+.indicator-button button.clicked,
+.indicator-button.active button {
   background-color: var(--hijaulime) !important;
 }
 
@@ -238,23 +240,13 @@ footer {
   z-index: 1;
 }
 
-/* responsif breakpoint */
-@media (max-width: 576px) {
-  .how-you-can-help-link:hover,
-  .how-you-can-help-link:hover + i {
-    transform: none;
-  }
-
-  .list-group-item {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-  }
-  .list-group-item i {
-    margin-left: auto;
-  }
+#about-us .carousel-item .team .rounded-circle {
+  background-color: var(--hijaumuda);
+  border: 3px solid var(--hijaumuda);
+  box-shadow: 0px 0px 19px var(--hijaulime);
 }
 
+/* responsif breakpoint */
 @media (max-width: 850px) {
   #about-us nav h1 {
     font-size: 3em !important;
@@ -270,9 +262,34 @@ footer {
     height: 300px !important;
     margin: auto;
   }
+
+  #about-us .carousel-item .quote,
+  #about-us .carousel-item .nama,
+  #about-us .carousel-item .sklh {
+    font-size: 2rem;
+  }
+
+  #about-us .carousel-item .team,
+  #about-us .carousel-item .team .dua {
+    margin-top: 5vh;
+  }
 }
 
 @media (max-width: 576px) {
+  .how-you-can-help-link:hover,
+  .how-you-can-help-link:hover + i {
+    transform: none;
+  }
+
+  .list-group-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+  }
+  .list-group-item i {
+    margin-left: auto;
+  }
+
   #about-us nav h1 {
     font-size: 2em !important;
   }
@@ -292,6 +309,24 @@ footer {
   }
 
   #about-us .indicators {
-    margin-left: 25vw;
+    margin-left: 17vw;
+  }
+
+  #about-us .carousel-item .team .dua {
+    margin-top: 3vh;
+  }
+
+  #about-us .carousel-item .quote {
+    margin-top: -25px;
+  }
+
+  #about-us .carousel-item .nama {
+    margin-top: -10px;
+  }
+
+  #about-us .carousel-item .quote,
+  #about-us .carousel-item .nama,
+  #about-us .carousel-item .sklh {
+    font-size: 1rem;
   }
 }

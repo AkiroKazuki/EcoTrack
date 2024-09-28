@@ -32,7 +32,7 @@
        <!-- indicator -->
       <div id="carouselExampleIndicators" class="carousel slide">
         <div class="indicators d-flex justify-content-between">
-          <div class="indicator-button" style="color: var(--hijaumuda);">
+          <div class="indicator-button active" style="color: var(--hijaumuda);">
             <p class="text-center">About <br>this web</p>
             <button type="button" onclick="changeColor(this)" class="rounded-circle" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           </div>
@@ -47,9 +47,10 @@
         </div>
         <!-- content -->
         <div class="carousel-inner mt-5">
+          <!-- about this web -->
           <div class="carousel-item w-100 active">
             <div class="row" style="height: auto; padding-left: 15em;">
-              <div class="col-lg-3 col-md-12">
+              <div class="col-lg-3 col-md-12 p-5">
                 <div class="rounded-circle" style="width: 200px; height: 200px; background-color: white;"></div>
               </div>
               <div class="text col-lg-7 col-md-12 mt-md-5" style="color: var(--hijaumuda);">
@@ -58,16 +59,46 @@
               </div>
             </div>
           </div>
+          <!-- team -->
           <div class="carousel-item w-100">
-            <!-- height dibawah jadi auto -->
-            <div class="row" style="height: 50vh; padding-left: 15em; background-color: blue;">
+            <div class="container">
+            <div class="row team pt-3 d-flex mx-auto justify-content-evenly" style="height: auto;">
+              <div class="col-lg-5 col-md-12 d-flex flex-column align-items-center">
+                <div class="rounded-circle" style="width: 200px; height: 200px; background-color: white;"></div>
+                <p class="quote text-center
+                " style="color: var(--hijaulime);">
+                  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quas."
+                </p>
+                <p class="nama text-center" style="color: var(--hijaumuda);">
+                  Dewa Prameshwara (Dode)
+                </p>
+                <p class="sklh text-center opacity-25" style="color: var(--hijaumuda); margin-top: -25px;">
+                  Student from SMAN 3 Denpasar
+                </p>
+              </div>
+              <div class="col-lg-5 col-md-12 d-flex flex-column align-items-center">
+                <div class="rounded-circle dua" style="width: 200px; height: 200px; background-color: white;"></div>
+                <p class="quote text-center mt-lg-2
+                " style="color: var(--hijaulime);">
+                  "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magnam, quas."
+                </p>
+                <p class="nama text-center" style="color: var(--hijaumuda);">
+                  Dewa Prameshwara (Dode)
+                </p>
+                <p class="sklh text-center opacity-25" style="color: var(--hijaumuda); margin-top: -25px;">
+                  Student from SMAN 3 Denpasar
+                </p>
+              </div>
             </div>
-          </div>        
+            </div>
+          </div>
           <div class="carousel-item w-100">
             <!-- height dibawah jadi auto -->
             <div class="row" style="height: 50vh; padding-left: 15em; background-color: green;">
+
             </div>
           </div>
+        </div>        
     </section>
     <!-- Footer -->
     <footer id="footer" class="text-center">
