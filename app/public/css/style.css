@@ -8,6 +8,32 @@
   --hitam: #000000;
 }
 
+/* Spinner */
+#spinner {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.5s ease-out, visibility 0s linear 0.5s;
+  z-index: 99999;
+}
+
+#spinner.hide {
+  opacity: 0;
+  visibility: hidden; /* Menyembunyikan spinner */
+}
+.top-50 {
+  top: 50%;
+}
+.start-50 {
+  left: 50%;
+}
+.translate-middle {
+  transform:translate(-50%, -50%);
+}
+.icon-small {
+  width: 4.2rem !important;
+  height: auto !important;
+}
+
 /* Custom styles for softer colors and improved layout */
 body {
   font-family: "calibri", sans-serif;
@@ -378,4 +404,81 @@ footer {
   #about-us .contact .email {
     font-size: 0.7rem;
   }
+}
+
+
+/* Light mode dan dark mode */
+
+body {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  font-family: monospace;
+  line-height: 1.5;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9A97F3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+[data-theme="light"] {
+  --primary-color: #4CAF50; /* Ganti dengan warna utama terang */
+  --secondary-color: #e1e1e1; /* Ganti dengan warna sekunder terang */
+  --font-color: #333; /* Ganti dengan warna font terang */
+  --bg-color: #ffffff; /* Ganti dengan warna latar belakang terang */
+  --heading-color: #000; /* Ganti dengan warna heading terang */
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 34px;
+  position: relative;
+  width: 60px;
+  padding-right: 20px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  background: #fff url('https://img.icons8.com/emoji/48/sun-emoji.png') no-repeat center center;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 26px;
+}
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background: #fff url('https://img.icons8.com/emoji/48/new-moon-emoji.png') no-repeat center center;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
