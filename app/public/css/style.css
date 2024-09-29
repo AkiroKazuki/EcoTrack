@@ -81,11 +81,10 @@ body {
   opacity: 0.3;
 }
 
-.homepage .navbar-brand {
+.homepage .navbar-brand,
+.about-us .navbar-brand {
   font-size: 2em;
   color: var(--hijaumuda);
-  /* -webkit-text-stroke-width: 1.5px;
-  -webkit-text-stroke-color: var(--hijaumuda); */
 }
 
 .homepage .navbar ul li a {
@@ -105,14 +104,15 @@ body {
   text-shadow: 2px 2px 2px var(--hijaumuda), -3px -3px 2px rgba(105, 100, 100, 0.5);
 }
 
-.text .btn {
+.container-homepage .text .btn {
   border-radius: 25px;
   padding: 1vw 3vw;
   background-color: var(--abugelap);
   color: var(--hijaulime);
+  transition: 0.5s ease;
 }
 
-.text .btn:hover {
+.container-homepage .text .btn:hover {
   background-color: var(--hijaulime);
   color: var(--abugelap);
 }
