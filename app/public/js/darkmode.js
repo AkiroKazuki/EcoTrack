@@ -1,27 +1,31 @@
-// window.console = window.console || function(t) {};
-// if (document.location.search.match(/type=embed/gi)) {
-//   window.parent.postMessage("resize", "*");
-// }
-// console.log('Ka.');
-// const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+const checkbox = document.getElementById('checkbox');
 
-// function switchTheme(e) {
-//     if (e.target.checked) {
-//         document.documentElement.setAttribute('data-theme', 'dark');
-//         localStorage.setItem('theme', 'dark'); //add this
-//     }
-//     else {
-//         document.documentElement.setAttribute('data-theme', 'light');
-//     }    
-// }
-// toggleSwitch.addEventListener('change', switchTheme, false);
+// update switch
+const setTheme = (theme) => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    checkbox.checked = (theme === 'dark'); // update switch berdasarkan tema yang dpilih
+};
 
-// const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
-// if (currentTheme) {
-//     document.documentElement.setAttribute('data-theme', currentTheme);
+// local storage check
+const savedTheme = localStorage.getItem('theme');
 
-//     if (currentTheme === 'dark') {
-//         toggleSwitch.checked = true;
-//     }
-// }
+// tema yang diganti user
+const currentTheme = savedTheme || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+// tema default user
+setTheme(currentTheme);
+
+// ganti tema
+checkbox.addEventListener('change', () => {
+    const theme = checkbox.checked ? 'dark' : 'light';
+    setTheme(theme);
+});
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+    if (!savedTheme) {
+        const theme = event.matches ? 'dark' : 'light';
+        setTheme(theme);
+    }
+});
 
