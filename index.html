@@ -20,8 +20,9 @@
 
     <!-- homepage -->
     <section id="homepage" class="homepage ">
-      <nav class="navbar navbar-expand-lg"> 
-          <h1 class="navbar-brand fw-bold">Nama Web</h1>
+      <nav class="navbar sticky-top navbar-expand-lg  navbar-center"> 
+        <div class="container">
+          <h1 class="navbar-brand fw-bold p-5">EcoTrack</h1>
           <!-- toggler -->
           <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDark" aria-controls="offcanvasDark">
             <span class="navbar-toggler-icon"></span>
@@ -34,13 +35,13 @@
             </div>
             <div class="offcanvas-body">
               <ul class="nav d-lg-none d-md-flex flex-column fs-3">
-                <li class="nav-item">
+                <li class="nav-item p-5">
                   <a class="nav-link" href="about-us.html">Who we are</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item p-5">
                   <a class="nav-link" href="#">nama inovasi</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item p-5">
                   <a class="nav-link" href="#section5">Get Involved</a>
                 </li>
               </ul>
@@ -58,19 +59,13 @@
             </li>
           </ul>
           <!-- switch -->
-          <!-- <div class="form-check form-switch fs-4 ms-5">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="cursor: pointer;">
-            <label class="form-check-label" for="flexSwitchCheckDefault"></label>
-          </div>
-          </div>
-
-        </div> -->
         <div class="theme-switch-wrapper">
           <label class="theme-switch" for="checkbox">
               <input type="checkbox" id="checkbox" />
               <div class="slider round"></div>
           </label>
         </div>
+      </div>
       </nav>
       <!-- isi content -->
       <div class="container-homepage text-center" style="box-sizing: boder-box;">
@@ -88,9 +83,9 @@
                 <span class="icon me-2">
                   <img src="/app/public/icon/deforestation-icon.png" alt="">
                 </span>
-                <p>Learn how AI is being used to detect and halt illegal deforestation in the Amazon rain forest. <br>
+                <p>See how AI is being used to detect and halt illegal deforestation in the Amazon rain forest. <br>
                   <a class="icon-link icon-link-hover link-light text-decoration-none" href="#section4">
-                    Learn more
+                    See more
                     <i class="bi bi-arrow-bar-right"></i>
                   </a>
                 </p>
@@ -101,9 +96,10 @@
                 <span class="icon me-2">
                   <img src="/app/public/icon/river-icon.png" alt="">
                 </span>
-                <p>Discover how AI-powered satellites monitor water quality in lakes and rivers across Africa. <br>
+                <p>Water Quality Monitoring in Africa
+                  Discover how AI-powered satellites monitor water quality in lakes and rivers across Africa. <br>
                   <a class="icon-link icon-link-hover link-light text-decoration-none" href="#section4">
-                    Learn more
+                    See more
                     <i class="bi bi-arrow-bar-right"></i>
                   </a>
                 </p>
@@ -116,7 +112,7 @@
                 </span>
                 <p>Explore the success stories of AI-led reforestation efforts in Indonesia, where satellite data helps track tree growth and forest recovery. <br>
                   <a class="icon-link icon-link-hover link-light text-decoration-none" href="#section4">
-                    Learn more
+                    See more
                     <i class="bi bi-arrow-bar-right"></i>
                   </a>
                 </p>
@@ -167,19 +163,38 @@
     </header> -->
 
     <!-- Section 1: Nature Overview -->
-    <section id="section1" class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <h2>Nature’s Richness</h2>
-          <p>
-            Our planet is home to diverse ecosystems, from expansive forests to vital water bodies. These natural resources are critical to maintaining life on Earth, but they face growing threats from human activity and climate change.
-          </p>
-        </div>
-        <div class="col-md-6">
-          <img src="forest_image.jpg" alt="Forest" class="img-fluid rounded" />
-        </div>
+    <!-- <section id="section1" class="hero">
+      <div class="hero-content">
+          <h2><span class="section1-header">Nature's</span> <br> <span class="section1-secondaryheader">Richness</span></h2>
+          <p style="color: var(--putih);">Our planet <span style="color: var(--hijaudaun) !important;"> is home to diverse ecosystems </span>, from expansive forests to vital water bodies. These natural resources are critical to maintaining life on Earth, but they face growing threats from human activity and climate change.</p>
       </div>
-    </section>
+      <div class="carousel">
+          <div class="carousel-slide">
+              <img src="app/public/img/Turtle.jpg" alt="Turtle">
+              <img src="app/public/img/Green Parrot.jpg" alt="Parrot">
+              <img src="app/public/img/Squirel.jpg" alt="Squirrel">
+          </div>
+      </div>
+  </section> -->
+
+
+    <!-- Full-Screen Section -->
+    <div id="section1" class="full-screen-section">
+      <div class="left-content">
+          <h1><span class="section1-header">Nature's</span> <br> <span class="section1-secondaryheader">Richness</span> </h1>
+          <p style="color: var(--putih);">Our planet <span style="color: var(--hijaudaun);">is home to diverse ecosystems</span>, from expansive forests to vital water bodies. These natural resources are critical to maintaining life on Earth, but they face growing threats from human activity and climate change.</p>
+      </div>
+
+      <!-- Carousel Container -->
+      <div class="carousel-container">
+          <div class="carousel-slide active">
+              <img src="app/public/img/Turtle.jpg" alt="Turtle" style="width:100%; height: 100%;">
+          </div>
+          <div class="carousel-slide">
+              <img src="app/public/img/Green Parrot.jpg" alt="Parrot" style="width:100%; height: 100%;">
+          </div>
+      </div>
+  </div>
 
     <!-- Section 2: Importance of Nature -->
     <section id="section2" class="bg-light">
