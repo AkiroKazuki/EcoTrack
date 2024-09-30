@@ -6,7 +6,7 @@
   --putihabu: #d8d5b7;
   --putih: #f4f4f4;
   --hitam: #000000;
-  --hijaudaun: #7ed957
+  --hijaudaun: #7ed957;
 }
 
 /* Spinner */
@@ -28,7 +28,7 @@
   left: 50%;
 }
 .translate-middle {
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .icon-small {
   width: 4.2rem !important;
@@ -38,7 +38,7 @@
 /* Custom styles for softer colors and improved layout */
 body {
   font-family: "calibri", sans-serif;
-  background-color: var(--putih);
+  background-color: var(--abugelap) !important;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -76,8 +76,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background-color: var(--abugelap);
+  height: 100%;
   z-index: -1;
   opacity: 0.3;
 }
@@ -135,13 +135,17 @@ body {
   -webkit-text-stroke-color: var(--hijaumuda);
 }
 
+.main-navbar nav ul a:hover {
+  color: var(--hijaulime) !important;
+}
+
 header {
   background-color: #82c7a5;
   padding: 60px 0;
   color: #fff;
 }
 .nav-link {
-  color: #fff !important;
+  color: #fff;
 }
 section {
   padding: 60px 0;
@@ -407,7 +411,6 @@ footer {
   }
 }
 
-
 /* Light mode dan dark mode */
 
 body {
@@ -418,7 +421,7 @@ body {
 }
 
 [data-theme="dark"] {
-  --primary-color: #9A97F3;
+  --primary-color: #9a97f3;
   --secondary-color: #818cab;
   --font-color: #e1e1ff;
   --bg-color: #161625;
@@ -426,7 +429,7 @@ body {
 }
 
 [data-theme="light"] {
-  --primary-color: #4CAF50; /* Ganti dengan warna utama terang */
+  --primary-color: #4caf50; /* Ganti dengan warna utama terang */
   --secondary-color: #e1e1e1; /* Ganti dengan warna sekunder terang */
   --font-color: #333; /* Ganti dengan warna font terang */
   --bg-color: #ffffff; /* Ganti dengan warna latar belakang terang */
@@ -453,17 +456,17 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
-  background: #fff url('https://img.icons8.com/emoji/48/sun-emoji.png') no-repeat center center;
+  background: #fff url("https://img.icons8.com/emoji/48/sun-emoji.png") no-repeat center center;
   bottom: 4px;
   content: "";
   height: 26px;
   left: 4px;
   position: absolute;
-  transition: .4s;
+  transition: 0.4s;
   width: 26px;
 }
 
@@ -473,7 +476,7 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(26px);
-  background: #fff url('https://img.icons8.com/emoji/48/new-moon-emoji.png') no-repeat center center;
+  background: #fff url("https://img.icons8.com/emoji/48/new-moon-emoji.png") no-repeat center center;
 }
 
 .slider.round {
@@ -489,29 +492,25 @@ input:checked + .slider:before {
   padding: 20px;
   background-color: #232e26;
   display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* height: 100vh;
+/* justify-content: space-between; */
+/* align-items: center; */
+/* height: 100vh;
   width: 100%;
 }
 
 .hero-content h2 {
   font-size: 3em; */
-  /* color: #7ed957; */
-  /* fill: none;
+/* color: #7ed957; */
+/* fill: none;
   stroke-width: .015;
   stroke: #fff;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
 /* } */
 .section1-header {
   color: transparent;
-  text-shadow:   
-  -1px -1px 0 white,  
-   1px -1px 0 white,  
-  -1px  1px 0 white,  
-   1px  1px 0 white; 
-font-weight: bold;
-}  
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  font-weight: bold;
+}
 
 .left-content .section1-secondaryheader {
   color: #7ed957;
@@ -543,7 +542,7 @@ font-weight: bold;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b2924;
+  background-color: var(--abugelap);
   padding: 20px;
   color: white;
 }
@@ -552,7 +551,6 @@ font-weight: bold;
 .left-content {
   flex: 1;
 }
-
 
 /* Right section with images (carousel) */
 .carousel-container {
@@ -581,11 +579,11 @@ font-weight: bold;
 /* Responsive version */
 @media (max-width: 768px) {
   .full-screen-section {
-      flex-direction: column;
-      text-align: center;
+    flex-direction: column;
+    text-align: center;
   }
 
   .carousel-container {
-      margin-top: 20px;
+    margin-top: 20px;
   }
 }

@@ -42,25 +42,24 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
-
 // carousel
-const carouselSlide = document.querySelector('.carousel-slide');
-const images = document.querySelectorAll('.carousel-slide img');
+const carouselSlide = document.querySelector(".carousel-slide");
+const images = document.querySelectorAll(".carousel-slide img");
 
 let counter = 0;
 const size = images[0].clientWidth;
 
 // move ke gambar pertama
-carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 
 // otomatis slide change
 function autoSlide() {
-    if (counter >= images.length - 1) {
-        counter = -1;
-    }
-    counter++;
-    carouselSlide.style.transition = "transform 0.5s ease-in-out";
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+  if (counter >= images.length - 1) {
+    counter = -1;
+  }
+  counter++;
+  carouselSlide.style.transition = "transform 0.5s ease-in-out";
+  carouselSlide.style.transform = "translateX(" + -size * counter + "px)";
 }
 
 // setting waktu untuk ganti image nya
