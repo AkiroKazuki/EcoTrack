@@ -43,25 +43,56 @@ form.addEventListener("submit", (e) => {
 });
 
 
-// carousel
-const carouselSlide = document.querySelector('.carousel-slide');
-const images = document.querySelectorAll('.carousel-slide img');
+// carousel  
+const carousels = document.querySelectorAll('.carousel'); // Ambil semua element carousel  
 
-let counter = 0;
-const size = images[0].clientWidth;
+carousels.forEach(carousel => {  
+    let currentIndex = 0;  
+    const items = carousel.querySelectorAll('.carousel-item');  
+    const totalItems = items.length;  
+    const intervalTime = 1300; // waktu dalam milidetik (1.3 detik)  
+    let interval;  
 
-// move ke gambar pertama
-carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    function updateCarousel() {  
+        items.forEach((item, index) => {  
+            item.style.transform = `translateX(-${currentIndex * 100}%)`;  
+        });  
+    }  
 
-// otomatis slide change
-function autoSlide() {
-    if (counter >= images.length - 1) {
-        counter = -1;
-    }
-    counter++;
-    carouselSlide.style.transition = "transform 0.5s ease-in-out";
-    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-}
+    function nextSlide() {  
+        currentIndex = (currentIndex + 1) % totalItems;  
+        updateCarousel();  
+    }  
 
-// setting waktu untuk ganti image nya
-setInterval(autoSlide, 1300);
+    function prevSlide() {  
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
+        updateCarousel();  
+    }  
+
+    // Event listeners untuk tombol  
+    const nextButton = carousel.querySelector('.next');  
+    const prevButton = carousel.querySelector('.prev');  
+
+    if (nextButton) {  
+        nextButton.addEventListener('click', () => {  
+            nextSlide();  
+            resetInterval();  
+        });  
+    }  
+
+    if (prevButton) {  
+        prevButton.addEventListener('click', () => {  
+            prevSlide();  
+            resetInterval();  
+        });  
+    }  
+
+    // Fungsi untuk mereset interval  
+    function resetInterval() {  
+        clearInterval(interval);  
+        interval = setInterval(nextSlide, intervalTime);  
+    }  
+
+    // Inisialisasi interval saat halaman dimuat  
+    interval = setInterval(nextSlide, intervalTime);  
+});

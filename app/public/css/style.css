@@ -6,7 +6,7 @@
   --putihabu: #d8d5b7;
   --putih: #f4f4f4;
   --hitam: #000000;
-  --hijaudaun: #7ed957
+  --hijaudaun: #7ed957;
 }
 
 /* Spinner */
@@ -28,7 +28,7 @@
   left: 50%;
 }
 .translate-middle {
-  transform:translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 .icon-small {
   width: 4.2rem !important;
@@ -38,7 +38,7 @@
 /* Custom styles for softer colors and improved layout */
 body {
   font-family: "calibri", sans-serif;
-  background-color: var(--putih);
+  background-color: var(--abugelap) !important;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -76,8 +76,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
   background-color: var(--abugelap);
+  height: 100%;
   z-index: -1;
   opacity: 0.3;
 }
@@ -135,13 +135,17 @@ body {
   -webkit-text-stroke-color: var(--hijaumuda);
 }
 
+.main-navbar nav ul a:hover {
+  color: var(--hijaulime) !important;
+}
+
 header {
   background-color: #82c7a5;
   padding: 60px 0;
   color: #fff;
 }
 .nav-link {
-  color: #fff !important;
+  color: #fff;
 }
 section {
   padding: 60px 0;
@@ -418,7 +422,7 @@ body {
 }
 
 [data-theme="dark"] {
-  --primary-color: #9A97F3;
+  --primary-color: #9a97f3;
   --secondary-color: #818cab;
   --font-color: #e1e1ff;
   --bg-color: #161625;
@@ -426,7 +430,7 @@ body {
 }
 
 [data-theme="light"] {
-  --primary-color: #4CAF50; /* Ganti dengan warna utama terang */
+  --primary-color: #4caf50; /* Ganti dengan warna utama terang */
   --secondary-color: #e1e1e1; /* Ganti dengan warna sekunder terang */
   --font-color: #333; /* Ganti dengan warna font terang */
   --bg-color: #ffffff; /* Ganti dengan warna latar belakang terang */
@@ -453,7 +457,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -485,107 +489,51 @@ input:checked + .slider:before {
 }
 
 /* Section 1 */
-/* .hero {
-  padding: 20px;
+.container-1 {
   background-color: #232e26;
-  display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* height: 100vh;
-  width: 100%;
-}
-
-.hero-content h2 {
-  font-size: 3em; */
-  /* color: #7ed957; */
-  /* fill: none;
-  stroke-width: .015;
-  stroke: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-/* } */
-.section1-header {
-  color: transparent;
-  text-shadow:   
-  -1px -1px 0 white,  
-   1px -1px 0 white,  
-  -1px  1px 0 white,  
-   1px  1px 0 white; 
-font-weight: bold;
-}  
-
-.left-content .section1-secondaryheader {
-  color: #7ed957;
-}
-
-/* .carousel {
-  width: 300px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #69db58;
-}
-
-.carousel-slide {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-/* Custom Hero Section Styling */
-.full-screen-section {
-  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b2924;
   padding: 20px;
-  color: white;
+  height: 100vh; /* Full-screen height */
 }
-
-/* Left section with text */
-.left-content {
+.container-s1-2 {
+  padding-left: 80px;
   flex: 1;
 }
+.s1-text1 {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  font-size: 96px;
+}
+.s1-text2 {
+  color: #7ed957;
+  font-size: 96px;
+}
+.s1-p1 {
+  font-size: 32px;
+  padding-top: 60px;
+}
 
-
-/* Right section with images (carousel) */
-.carousel-container {
+/* Carousel (Image Slider) */
+.carousel {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  max-width: 50%; /* Set max width for responsiveness */
+  height: auto;
 }
 
-.carousel-slide {
-  width: 100%;
-  max-width: 400px;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-}
-
-/* Responsive version */
+/* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
-  .full-screen-section {
-      flex-direction: column;
-      text-align: center;
+  .container-1 {
+      flex-direction: column; /* Stack content vertically on small screens */
   }
 
-  .carousel-container {
-      margin-top: 20px;
+  .carousel {
+      max-width: 100%; /* Full width for carousel on smaller screens */
+  }
+
+  .container-s1-2 {
+      text-align: center; /* Center the text on smaller screens */
   }
 }
