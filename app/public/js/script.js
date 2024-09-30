@@ -42,7 +42,6 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
-
 // carousel  
 const carousels = document.querySelectorAll('.carousel'); // Ambil semua element carousel  
 
@@ -52,12 +51,12 @@ carousels.forEach(carousel => {
     const totalItems = items.length;  
     const intervalTime = 1300; // waktu dalam milidetik (1.3 detik)  
     let interval;  
-
+    
     function updateCarousel() {  
         items.forEach((item, index) => {  
-            item.style.transform = `translateX(-${currentIndex * 100}%)`;  
+            item.style.transform = `translateX(${-currentIndex * 100}%)`;  
         });  
-    }  
+    }
 
     function nextSlide() {  
         currentIndex = (currentIndex + 1) % totalItems;  
