@@ -1,2 +1,3 @@
 #ignore all node modules file
 /.github
+/.node_modules
