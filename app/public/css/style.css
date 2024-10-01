@@ -516,65 +516,51 @@ input:checked + .slider:before {
 }
 
 /* Carousel (Image Slider) */
-.carousel {  
+#section1 .carousel,
+#section1 .carousel1 {
   width: 400px;
   height: 600px;
-  border: 5px solid green;
-  border-radius: 10px;
-  overflow: hidden; /* Sembunyikan bagian gambar yang melampaui */  
+  overflow: hidden; /* Sembunyikan bagian gambar yang melampaui */
   transition: transform 0.3s ease;
   margin-right: 20px;
-}  
+}
 
-/* Hapus margin dari carousel terakhir */  
-.carousel:last-child {  
-  margin-right: 0; /* Tanggalkan margin kanan pada carousel terakhir */  
-}  
-.carousel1 {  
+#section1 .carousel1 {
   width: 400px;
   height: 500px;
-  border: 5px solid green;
-  border-radius: 10px;
-  overflow: hidden; /* Sembunyikan bagian gambar yang melampaui */  
-  transition: transform 0.3s ease;
-  margin-right: 20px;
-}  
+}
 
-/* Hapus margin dari carousel terakhir */  
-.carousel1:last-child {  
-  margin-right: 0; /* Tanggalkan margin kanan pada carousel terakhir */  
-}  
-/* Efek Hover */  
-.carousel:hover {  
+/* Hapus margin dari carousel terakhir */
+.carousel:last-child,
+.carousel1:last-child {
+  margin-right: 0; /* Tanggalkan margin kanan pada carousel terakhir */
+}
+
+/* Efek Hover */
+#section1 .carousel:hover,
+#section1 .carousel1:hover {
   transform: scale(1.05);
-}  
+}
 
 /* gambar di dlm carousel */
-.carousel-item img {  
+#section1 .carousel-item img {
   width: 100%;
   height: auto;
-} 
-.carousel1:hover {  
-  transform: scale(1.05);
-}  
-
-.carousel-item img {  
-  width: 100%;
-  height: auto;
+  border: 5px solid green;
+  border-radius: 10px;
 }
 
 /* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
   .container-1 {
-      flex-direction: column; /* Stack content vertically on small screens */
+    flex-direction: column; /* Stack content vertically on small screens */
   }
 
   .carousel {
-      max-width: 100%; /* Full width for carousel on smaller screens */
+    max-width: 100%; /* Full width for carousel on smaller screens */
   }
 
   .container-s1-2 {
-      text-align: center; /* Center the text on smaller screens */
+    text-align: center; /* Center the text on smaller screens */
   }
 }
-
