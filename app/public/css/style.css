@@ -488,102 +488,51 @@ input:checked + .slider:before {
 }
 
 /* Section 1 */
-/* .hero {
-  padding: 20px;
+.container-1 {
   background-color: #232e26;
-  display: flex; */
-/* justify-content: space-between; */
-/* align-items: center; */
-/* height: 100vh;
-  width: 100%;
-}
-
-.hero-content h2 {
-  font-size: 3em; */
-/* color: #7ed957; */
-/* fill: none;
-  stroke-width: .015;
-  stroke: #fff;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-/* } */
-.section1-header {
-  color: transparent;
-  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
-  font-weight: bold;
-}
-
-.left-content .section1-secondaryheader {
-  color: #7ed957;
-}
-
-/* .carousel {
-  width: 300px;
-  height: 400px;
-  position: relative;
-  overflow: hidden;
-  border: 2px solid #69db58;
-}
-
-.carousel-slide {
-  display: flex;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
-
-/* Custom Hero Section Styling */
-.full-screen-section {
-  height: 100vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--abugelap);
   padding: 20px;
-  color: white;
+  height: 100vh; /* Full-screen height */
 }
-
-/* Left section with text */
-.left-content {
+.container-s1-2 {
+  padding-left: 80px;
   flex: 1;
 }
+.s1-text1 {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  font-size: 96px;
+}
+.s1-text2 {
+  color: #7ed957;
+  font-size: 96px;
+}
+.s1-p1 {
+  font-size: 32px;
+  padding-top: 60px;
+}
 
-/* Right section with images (carousel) */
-.carousel-container {
+/* Carousel (Image Slider) */
+.carousel {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
+  max-width: 50%; /* Set max width for responsiveness */
+  height: auto;
 }
 
-.carousel-slide {
-  width: 100%;
-  max-width: 400px;
-  height: 300px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.carousel-slide.active {
-  opacity: 1;
-}
-
-/* Responsive version */
+/* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
-  .full-screen-section {
-    flex-direction: column;
-    text-align: center;
+  .container-1 {
+      flex-direction: column; /* Stack content vertically on small screens */
   }
 
-  .carousel-container {
-    margin-top: 20px;
+  .carousel {
+      max-width: 100%; /* Full width for carousel on smaller screens */
+  }
+
+  .container-s1-2 {
+      text-align: center; /* Center the text on smaller screens */
   }
 }
