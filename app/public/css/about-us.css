@@ -1,0 +1,195 @@
+/* about us */
+#about-us {
+  margin-top: 0;
+  padding-top: 0;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+#about-us .navbar-brand {
+  color: var(--abugelap);
+  letter-spacing: 5px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: var(--hijaulime);
+}
+
+#about-us .navbar .bi:hover {
+  color: var(--hijaulime);
+}
+
+#about-us .indicators {
+  margin-left: 37.5vw;
+  width: calc(720px / 4);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+#about-us .indicators .indicator-button {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#about-us .indicators .indicator-button:hover,
+.indicator-button.clicked,
+.indicator-button.active {
+  color: var(--hijaulime) !important;
+  transform: scale(1.1);
+}
+
+#about-us .indicators .indicator-button:hover button,
+.indicator-button button.clicked,
+.indicator-button.active button {
+  background-color: var(--hijaulime) !important;
+}
+
+#about-us .indicators button {
+  border: none;
+  background-color: var(--hijaumuda);
+  width: 20px;
+  height: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+#about-us .indicators::before {
+  content: "";
+  position: absolute;
+  top: 88%;
+  left: 20%;
+  right: -10%;
+  height: 2px;
+  background-color: var(--hijaumuda);
+  z-index: 0;
+}
+
+#about-us .indicators p {
+  width: 80px;
+  z-index: 1;
+}
+
+#about-us .carousel-item .team .rounded-circle {
+  background-color: var(--hijaumuda);
+  border: 3px solid var(--hijaumuda);
+  box-shadow: 0px 0px 19px var(--hijaulime);
+}
+
+#about-us .button-wrap button:hover {
+  background-color: var(--abugelap) !important;
+  color: var(--hijaulime) !important;
+  border: 2px solid var(--hijaulime);
+  opacity: 0.5;
+}
+
+#about-us .contact .form-control {
+  background-color: var(--abuterang);
+  border: none;
+  border-radius: 10px;
+}
+/* about us end */
+
+/* responsif breakpoint */
+@media (max-width: 850px) {
+  #about-us nav h1 {
+    font-size: 3em !important;
+  }
+
+  #about-us .carousel-item .row {
+    padding: 0 3em 0 10vw !important;
+    text-align: center;
+  }
+
+  #about-us .carousel-item .rounded-circle {
+    width: 300px !important;
+    height: 300px !important;
+    margin: auto;
+  }
+
+  #about-us .carousel-item .quote,
+  #about-us .carousel-item .nama,
+  #about-us .carousel-item .sklh {
+    font-size: 2rem;
+  }
+
+  #about-us .carousel-item .team,
+  #about-us .carousel-item .team .dua {
+    margin-top: 5vh;
+  }
+
+  #about-us .contact .row,
+  #about-us .contact .row h1 {
+    padding-left: 3em !important;
+    text-align: start;
+  }
+
+  #about-us .contact button {
+    margin-left: 1.5em;
+  }
+}
+
+@media (max-width: 576px) {
+  #about-us nav h1 {
+    font-size: 2em !important;
+  }
+
+  #about-us nav i {
+    font-size: 1.5rem !important;
+  }
+
+  #about-us .form-check {
+    font-size: 1rem !important;
+  }
+
+  #about-us .carousel-item .rounded-circle {
+    width: 150px !important;
+    height: 150px !important;
+    margin-bottom: 30px;
+  }
+
+  #about-us .indicators {
+    margin-left: 17vw;
+  }
+
+  #about-us .carousel-item .team .dua {
+    margin-top: 3vh;
+  }
+
+  #about-us .carousel-item .quote {
+    margin-top: -25px;
+  }
+
+  #about-us .carousel-item .nama {
+    margin-top: -10px;
+  }
+
+  #about-us .carousel-item .quote,
+  #about-us .carousel-item .nama,
+  #about-us .carousel-item .sklh {
+    font-size: 1rem;
+  }
+
+  #about-us .contact .row,
+  #about-us .contact .row h1 {
+    padding-left: 1em !important;
+    text-align: start;
+  }
+
+  #about-us .contact button {
+    margin-left: 0em;
+  }
+
+  #about-us .contact .via {
+    margin-top: 1em;
+    width: 50vw;
+  }
+
+  #about-us .contact .email {
+    font-size: 0.7rem;
+  }
+}

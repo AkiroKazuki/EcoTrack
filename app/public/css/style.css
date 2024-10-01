@@ -1,12 +1,38 @@
 :root {
   --hijaumuda: #d8efdd;
-  --hijaulime: rgb(126, 217, 87);
+  --hijaulime: #7ed957;
   --abugelap: #232e26;
   --abuterang: #666f69;
   --putihabu: #d8d5b7;
   --putih: #f4f4f4;
   --hitam: #000000;
   --hijaudaun: #7ed957;
+}
+
+[data-theme="dark"] {
+  --primary-color: #9a97f3;
+  --secondary-color: #818cab;
+  --font-color: #e1e1ff;
+  --bg-color: #161625;
+  --heading-color: #818cab;
+}
+
+[data-theme="light"] {
+  --primary-color: #4caf50; /* Ganti dengan warna utama terang */
+  --secondary-color: #e1e1e1; /* Ganti dengan warna sekunder terang */
+  --font-color: #333; /* Ganti dengan warna font terang */
+  --bg-color: #ffffff; /* Ganti dengan warna latar belakang terang */
+  --heading-color: #000; /* Ganti dengan warna heading terang */
+}
+
+/* Custom styles for softer colors and improved layout */
+body {
+  font-family: monospace;
+  box-sizing: border-box;
+  background-image: url(../img/Section-bg.svg);
+  overflow-x: hidden;
+  color: var(--font-color);
+  line-height: 1.5;
 }
 
 /* Spinner */
@@ -34,106 +60,60 @@
   width: 4.2rem !important;
   height: auto !important;
 }
+/* spinner end*/
 
-/* Custom styles for softer colors and improved layout */
-body {
-  font-family: "calibri", sans-serif;
-  background-color: var(--abugelap) !important;
-  box-sizing: border-box;
-  overflow-x: hidden;
-}
-
-#homepage {
-  margin-top: 0;
-  padding-top: 0;
-  height: 100vh;
+/* Light mode dan dark mode */
+.theme-switch {
+  display: inline-block;
+  height: 34px;
   position: relative;
-  z-index: 1;
+  width: 60px;
+  padding-right: 20px;
 }
 
-#homepage::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/forest-bg.png);
-  background-size: cover;
-  z-index: -1;
-  filter: brightness(0.7);
+.theme-switch input {
+  display: none;
 }
 
-.homepage .navbar {
-  position: relative;
-  z-index: 1;
-  height: 10vh;
-}
-
-.homepage .navbar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: var(--abugelap);
-  height: 100%;
-  z-index: -1;
-  opacity: 0.3;
-}
-
-.homepage .navbar-brand,
-.about-us .navbar-brand {
-  font-size: 2em;
-  color: var(--hijaumuda);
-}
-
-.homepage .navbar ul li a {
-  color: var(--hijaumuda) !important;
-}
-
-.homepage .navbar ul li a:hover {
-  color: var(--hijaulime) !important;
-}
-
-.homepage .title .text h1 {
-  font-size: 4rem !important;
-  color: var(--hijaumuda);
-  letter-spacing: 5px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--hijaumuda);
-  text-shadow: 2px 2px 2px var(--hijaumuda), -3px -3px 2px rgba(105, 100, 100, 0.5);
-}
-
-.container-homepage .text .btn {
-  border-radius: 25px;
-  padding: 1vw 3vw;
-  background-color: var(--abugelap);
-  color: var(--hijaulime);
-  transition: 0.5s ease;
-}
-
-.container-homepage .text .btn:hover {
-  background-color: var(--hijaulime);
-  color: var(--abugelap);
-}
-
-.description .icon-link:hover {
-  color: var(--hijaulime) !important;
-}
-
-.scroll {
+.slider {
+  background-color: #ccc;
   bottom: 0;
-  left: 50%;
-  color: rgba(255, 255, 255, 0);
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: var(--hijaumuda);
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
 }
 
-.scroll:hover {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--hijaumuda);
+.slider:before {
+  background: #fff url("https://img.icons8.com/emoji/48/sun-emoji.png") no-repeat center center;
+  bottom: 4px;
+  content: "";
+  height: 26px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 26px;
 }
+
+input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+  background: #fff url("https://img.icons8.com/emoji/48/new-moon-emoji.png") no-repeat center center;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+/* light dark mode end */
 
 .main-navbar nav ul a:hover {
   color: var(--hijaulime) !important;
@@ -203,136 +183,13 @@ footer {
   margin: 0;
 }
 
-#about-us {
-  margin-top: 0;
-  padding-top: 0;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-}
-
-#about-us .navbar-brand {
-  color: var(--abugelap);
-  letter-spacing: 5px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--hijaulime);
-}
-
-#about-us .navbar .bi:hover {
-  color: var(--hijaulime);
-}
-
-#about-us .indicators {
-  margin-left: 37.5vw;
-  width: calc(720px / 4);
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-#about-us .indicators .indicator-button {
-  position: relative;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-#about-us .indicators .indicator-button:hover,
-.indicator-button.clicked,
-.indicator-button.active {
-  color: var(--hijaulime) !important;
-  transform: scale(1.1);
-}
-
-#about-us .indicators .indicator-button:hover button,
-.indicator-button button.clicked,
-.indicator-button.active button {
-  background-color: var(--hijaulime) !important;
-}
-
-#about-us .indicators button {
-  border: none;
-  background-color: var(--hijaumuda);
-  width: 20px;
-  height: 20px;
-  position: relative;
-  z-index: 1;
-}
-
-#about-us .indicators::before {
-  content: "";
-  position: absolute;
-  top: 88%;
-  left: 20%;
-  right: -10%;
-  height: 2px;
-  background-color: var(--hijaumuda);
-  z-index: 0;
-}
-
-#about-us .indicators p {
-  width: 80px;
-  z-index: 1;
-}
-
-#about-us .carousel-item .team .rounded-circle {
-  background-color: var(--hijaumuda);
-  border: 3px solid var(--hijaumuda);
-  box-shadow: 0px 0px 19px var(--hijaulime);
-}
-
-#about-us .button-wrap button:hover {
-  background-color: var(--abugelap) !important;
-  color: var(--hijaulime) !important;
-  border: 2px solid var(--hijaulime);
-  opacity: 0.5;
-}
-
-#about-us .contact .form-control {
-  background-color: var(--abuterang);
-  border: none;
-  border-radius: 10px;
-}
-
 /* responsif breakpoint */
 @media (max-width: 850px) {
-  #about-us nav h1 {
-    font-size: 3em !important;
-  }
+}
 
-  #about-us .carousel-item .row {
-    padding: 0 3em 0 10vw !important;
-    text-align: center;
-  }
-
-  #about-us .carousel-item .rounded-circle {
-    width: 300px !important;
-    height: 300px !important;
-    margin: auto;
-  }
-
-  #about-us .carousel-item .quote,
-  #about-us .carousel-item .nama,
-  #about-us .carousel-item .sklh {
-    font-size: 2rem;
-  }
-
-  #about-us .carousel-item .team,
-  #about-us .carousel-item .team .dua {
-    margin-top: 5vh;
-  }
-
-  #about-us .contact .row,
-  #about-us .contact .row h1 {
-    padding-left: 3em !important;
-    text-align: start;
-  }
-
-  #about-us .contact button {
-    margin-left: 1.5em;
+@media (max-width: 768px) {
+  .carousel {
+    max-width: 100%; /* Full width for carousel on smaller screens */
   }
 }
 
@@ -349,251 +206,5 @@ footer {
   }
   .list-group-item i {
     margin-left: auto;
-  }
-
-  #about-us nav h1 {
-    font-size: 2em !important;
-  }
-
-  #about-us nav i {
-    font-size: 1.5rem !important;
-  }
-
-  #about-us .form-check {
-    font-size: 1rem !important;
-  }
-
-  #about-us .carousel-item .rounded-circle {
-    width: 150px !important;
-    height: 150px !important;
-    margin-bottom: 30px;
-  }
-
-  #about-us .indicators {
-    margin-left: 17vw;
-  }
-
-  #about-us .carousel-item .team .dua {
-    margin-top: 3vh;
-  }
-
-  #about-us .carousel-item .quote {
-    margin-top: -25px;
-  }
-
-  #about-us .carousel-item .nama {
-    margin-top: -10px;
-  }
-
-  #about-us .carousel-item .quote,
-  #about-us .carousel-item .nama,
-  #about-us .carousel-item .sklh {
-    font-size: 1rem;
-  }
-
-  #about-us .contact .row,
-  #about-us .contact .row h1 {
-    padding-left: 1em !important;
-    text-align: start;
-  }
-
-  #about-us .contact button {
-    margin-left: 0em;
-  }
-
-  #about-us .contact .via {
-    margin-top: 1em;
-    width: 50vw;
-  }
-
-  #about-us .contact .email {
-    font-size: 0.7rem;
-  }
-
-  #section1 .text h1 {
-    font-size: 4em;
-    padding-left: 0 !important;
-  }
-}
-
-/* Light mode dan dark mode */
-
-body {
-  background-color: var(--bg-color);
-  color: var(--font-color);
-  font-family: monospace;
-  line-height: 1.5;
-}
-
-[data-theme="dark"] {
-  --primary-color: #9a97f3;
-  --secondary-color: #818cab;
-  --font-color: #e1e1ff;
-  --bg-color: #161625;
-  --heading-color: #818cab;
-}
-
-[data-theme="light"] {
-  --primary-color: #4caf50; /* Ganti dengan warna utama terang */
-  --secondary-color: #e1e1e1; /* Ganti dengan warna sekunder terang */
-  --font-color: #333; /* Ganti dengan warna font terang */
-  --bg-color: #ffffff; /* Ganti dengan warna latar belakang terang */
-  --heading-color: #000; /* Ganti dengan warna heading terang */
-}
-
-.theme-switch {
-  display: inline-block;
-  height: 34px;
-  position: relative;
-  width: 60px;
-  padding-right: 20px;
-}
-
-.theme-switch input {
-  display: none;
-}
-
-.slider {
-  background-color: #ccc;
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.4s;
-}
-
-.slider:before {
-  background: #fff url("https://img.icons8.com/emoji/48/sun-emoji.png") no-repeat center center;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: 0.4s;
-  width: 26px;
-}
-
-input:checked + .slider {
-  background-color: #66bb6a;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-  background: #fff url("https://img.icons8.com/emoji/48/new-moon-emoji.png") no-repeat center center;
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
-
-/* Section 1 */
-.container-1 {
-  background-color: #232e26;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
-.container-s1-2 {
-  padding-left: 80px;
-  flex: 1;
-}
-.s1-text1 {
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
-  font-size: 96px;
-}
-.s1-text2 {
-  color: #7ed957;
-  font-size: 96px;
-}
-.s1-p1 {
-  font-size: 32px;
-  padding-top: 60px;
-}
-
-/* Carousel (Image Slider) */
-#carousel-section1 {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  height: auto;
-  margin-left: 10px;
-}
-
-#carousel-section1 .img-move {
-  transition: transform 0.3s ease;
-  margin-left: 30px;
-  display: inline-block;
-  padding: 10vh 0;
-  /* nanti diisi patern */
-  /* background-image: ;  */
-}
-
-#carousel-section1::before,
-#carousel-section1::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 10%;
-  height: 100%;
-  z-index: 99;
-}
-
-.carousel-section1 img {  
-  transition: transform 0.3s ease; /* Transisi untuk efek upscale */  
-}
-.carousel-section1 img:hover {  
-  transform: scale(1.2); /* Efek upscale saat hover */  
-}  
-/* #carousel-section1::before {
-  left: 0;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0), var(--hijaulime));
-}
-
-#carousel-section1::after {
-  right: 0;
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--hijaulime)); */
-/* } */
-
-#carousel-section1 .img-move img {
-  width: 300px;
-  border-radius: 10px;
-  margin: 0 10px;
-  animation: 20s slide infinite linear;
-  border-radius: 20px;
-  border: 2px solid var(--hijaulime);
-}
-
-/* keyframe */
-@keyframes slide {
-  form {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-778%);
-  }
-}
-
-/* Media Queries for Smaller Screens */
-@media (max-width: 768px) {
-  .container-1 {
-    flex-direction: column; /* Stack content vertically on small screens */
-  }
-
-  .carousel {
-    max-width: 100%; /* Full width for carousel on smaller screens */
-  }
-
-  .container-s1-2 {
-    text-align: center; /* Center the text on smaller screens */
   }
 }

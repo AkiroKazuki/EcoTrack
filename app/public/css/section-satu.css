@@ -1,0 +1,106 @@
+/* Section 1 */
+.container-1 {
+  background-color: #232e26;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.container-s1-2 {
+  padding-left: 80px;
+  flex: 1;
+}
+.s1-text1 {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+  font-size: 96px;
+}
+.s1-text2 {
+  color: #7ed957;
+  font-size: 96px;
+}
+.s1-p1 {
+  font-size: 32px;
+  padding-top: 60px;
+}
+
+/* Carousel (Image Slider) */
+#carousel-section1 {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  height: auto;
+  margin-left: 10px;
+}
+
+#carousel-section1 .img-move {
+  transition: transform 0.3s ease;
+  margin-left: 30px;
+  display: inline-block;
+  padding: 10vh 0;
+  /* nanti diisi patern */
+  /* background-image: ;  */
+}
+
+#carousel-section1::before,
+#carousel-section1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  height: 100%;
+  z-index: 99;
+}
+
+.carousel-section1 img {
+  transition: transform 0.3s ease; /* Transisi untuk efek upscale */
+}
+.carousel-section1 img:hover {
+  transform: scale(1.2); /* Efek upscale saat hover */
+}
+
+#carousel-section1 .img-move img {
+  width: 300px;
+  border-radius: 10px;
+  margin: 0 10px;
+  animation: 20s slide infinite linear;
+  border-radius: 20px;
+  border: 2px solid var(--hijaulime);
+}
+
+/* keyframe */
+@keyframes slide {
+  form {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-778%);
+  }
+}
+
+/* responsif breakpoint */
+@media (max-width: 850px) {
+}
+
+@media (max-width: 768px) {
+  .container-1 {
+    flex-direction: column; /* Stack content vertically on small screens */
+  }
+
+  .carousel {
+    max-width: 100%; /* Full width for carousel on smaller screens */
+  }
+
+  .container-s1-2 {
+    text-align: center; /* Center the text on smaller screens */
+  }
+}
+
+@media (max-width: 576px) {
+  #section1 .text h1 {
+    font-size: 4em;
+    padding-left: 0 !important;
+  }
+}

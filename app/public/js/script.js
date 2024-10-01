@@ -1,118 +1,74 @@
-function changeColor(element) {
-  const buttons = document.querySelectorAll(".indicator-button button");
-  const group = document.querySelectorAll(".indicator-button");
+// carousel
+const carousels = document.querySelectorAll(".carousel .carousel1");
 
-  buttons.forEach((btn) => {
-    btn.classList.remove("clicked");
+carousels.forEach((carousel) => {
+  let currentIndex = 0;
+  const items = carousel.querySelectorAll(".carousel-item");
+  const totalItems = items.length;
+  const intervalTime = 1000; // 1 detik
+  let interval;
+
+  function updateCarousel() {
+    items.forEach((item, index) => {
+      item.style.transform = `translateX(-${currentIndex * 100}%)`;
+    });
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+  }
+
+  function prevSlide() {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+  }
+
+  const nextButton = carousel.querySelector(".next");
+  const prevButton = carousel.querySelector(".prev");
+
+  if (nextButton) {
+    nextButton.addEventListener("click", () => {
+      nextSlide();
+      resetInterval();
+    });
+  }
+
+  if (prevButton) {
+    prevButton.addEventListener("click", () => {
+      prevSlide();
+      resetInterval();
+    });
+  }
+
+  function resetInterval() {
+    clearInterval(interval);
+    interval = setInterval(nextSlide, intervalTime);
+  }
+
+  // Inisialisasi interval saat halaman dimuat
+  interval = setInterval(nextSlide, intervalTime);
+
+  // Hentikan interval saat hover
+  carousel.addEventListener("mouseenter", () => {
+    clearInterval(interval);
   });
-  group.forEach((grp) => {
-    grp.classList.remove("clicked");
-    grp.classList.remove("active");
+
+  // Mulai kembali interval saat mouse keluar
+  carousel.addEventListener("mouseleave", () => {
+    interval = setInterval(nextSlide, intervalTime);
   });
 
-  element.classList.add("clicked");
-  element.parentElement.classList.add("clicked");
-  element.parentElement.classList.add("active");
-}
+  // Menambahkan efek upscale pada gambar saat hover
+  const images = carousel.querySelectorAll("img"); // Ambil semua gambar dalam carousel
+  images.forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+      img.style.transform = "scale(1.2)"; // Upscale saat hover
+      img.style.transition = "transform 0.3s ease"; // Transisi untuk efek upscale
+    });
 
-const scriptURL = "https://script.google.com/macros/s/AKfycbyD_xi757IjUEU_t-v42Mzl4CrJcqMHzI2InAkPbp9zp7Xg_DFxvVJ_Gyqx2Jr7Zm4/exec";
-const form = document.forms["dode-contact-form"];
-const btnKirim = document.querySelector(".btn-kirim");
-const btnLoading = document.querySelector(".btn-loading");
-const myAlert = document.querySelector(".alert");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  // saat tombol submit di klik
-  // tampilkan tombol loading dan hilangkan tombol kirim
-  btnLoading.classList.toggle("d-none");
-  btnKirim.classList.toggle("d-none");
-  fetch(scriptURL, { method: "POST", body: new FormData(form) })
-    .then((response) => {
-      // saat tombol submit di klik
-      // tampilkan tombol kirim dan hilangkan tombol loading
-      btnLoading.classList.toggle("d-none");
-      btnKirim.classList.toggle("d-none");
-      // tampilkan alert
-      myAlert.classList.toggle("d-none");
-      // reset form
-      form.reset();
-      console.log("Success!", response);
-    })
-    .catch((error) => console.error("Error!", error.message));
-});
-
-// carousel  
-const carousels = document.querySelectorAll('.carousel .carousel1');  
-
-carousels.forEach(carousel => {  
-    let currentIndex = 0;  
-    const items = carousel.querySelectorAll('.carousel-item');  
-    const totalItems = items.length;  
-    const intervalTime = 1000;  // 1 detik  
-    let interval;  
-
-    function updateCarousel() {  
-        items.forEach((item, index) => {  
-            item.style.transform = `translateX(-${currentIndex * 100}%)`;  
-        });  
-    }  
-
-    function nextSlide() {  
-        currentIndex = (currentIndex + 1) % totalItems;  
-        updateCarousel();  
-    }  
-
-    function prevSlide() {  
-        currentIndex = (currentIndex - 1 + totalItems) % totalItems;  
-        updateCarousel();  
-    }  
-
-    const nextButton = carousel.querySelector('.next');  
-    const prevButton = carousel.querySelector('.prev');  
-
-    if (nextButton) {  
-        nextButton.addEventListener('click', () => {  
-            nextSlide();  
-            resetInterval();  
-        });  
-    }  
-
-    if (prevButton) {  
-        prevButton.addEventListener('click', () => {  
-            prevSlide();  
-            resetInterval();  
-        });  
-    }  
-
-    function resetInterval() {  
-        clearInterval(interval);  
-        interval = setInterval(nextSlide, intervalTime);  
-    }  
-
-    // Inisialisasi interval saat halaman dimuat  
-    interval = setInterval(nextSlide, intervalTime);  
-
-    // Hentikan interval saat hover  
-    carousel.addEventListener('mouseenter', () => {  
-        clearInterval(interval);  
-    });  
-
-    // Mulai kembali interval saat mouse keluar  
-    carousel.addEventListener('mouseleave', () => {  
-        interval = setInterval(nextSlide, intervalTime);  
-    });  
-
-    // Menambahkan efek upscale pada gambar saat hover  
-    const images = carousel.querySelectorAll('img'); // Ambil semua gambar dalam carousel  
-    images.forEach(img => {  
-        img.addEventListener('mouseenter', () => {  
-            img.style.transform = 'scale(1.2)'; // Upscale saat hover  
-            img.style.transition = 'transform 0.3s ease'; // Transisi untuk efek upscale  
-        });  
-
-        img.addEventListener('mouseleave', () => {  
-            img.style.transform = ''; // Reset saat mouse keluar  
-        });  
-    });  
+    img.addEventListener("mouseleave", () => {
+      img.style.transform = ""; // Reset saat mouse keluar
+    });
+  });
 });
