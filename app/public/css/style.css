@@ -548,6 +548,12 @@ input:checked + .slider:before {
   z-index: 99;
 }
 
+.carousel-section1 img {  
+  transition: transform 0.3s ease; /* Transisi untuk efek upscale */  
+}
+.carousel-section1 img:hover {  
+  transform: scale(1.2); /* Efek upscale saat hover */  
+}  
 /* #carousel-section1::before {
   left: 0;
   background: linear-gradient(to left, rgba(0, 0, 0, 0), var(--hijaulime));
