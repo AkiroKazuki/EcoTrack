@@ -43,20 +43,20 @@ form.addEventListener("submit", (e) => {
 });
 
 // carousel  
-const carousels = document.querySelectorAll('.carousel'); // Ambil semua element carousel  
+const carousels = document.querySelectorAll('.carousel .carousel1');  
 
 carousels.forEach(carousel => {  
     let currentIndex = 0;  
     const items = carousel.querySelectorAll('.carousel-item');  
     const totalItems = items.length;  
-    const intervalTime = 1300; // waktu dalam milidetik (1.3 detik)  
+    const intervalTime = 1000;  //1 detik
     let interval;  
-    
+
     function updateCarousel() {  
         items.forEach((item, index) => {  
-            item.style.transform = `translateX(${-currentIndex * 100}%)`;  
+            item.style.transform = `translateX(-${currentIndex * 100}%)`;  
         });  
-    }
+    }  
 
     function nextSlide() {  
         currentIndex = (currentIndex + 1) % totalItems;  
@@ -68,7 +68,6 @@ carousels.forEach(carousel => {
         updateCarousel();  
     }  
 
-    // Event listeners untuk tombol  
     const nextButton = carousel.querySelector('.next');  
     const prevButton = carousel.querySelector('.prev');  
 
@@ -86,7 +85,6 @@ carousels.forEach(carousel => {
         });  
     }  
 
-    // Fungsi untuk mereset interval  
     function resetInterval() {  
         clearInterval(interval);  
         interval = setInterval(nextSlide, intervalTime);  
@@ -94,4 +92,14 @@ carousels.forEach(carousel => {
 
     // Inisialisasi interval saat halaman dimuat  
     interval = setInterval(nextSlide, intervalTime);  
+
+    // Hentikan interval saat hover  
+    carousel.addEventListener('mouseenter', () => {  
+        clearInterval(interval);  
+    });  
+
+    // Mulai kembali interval saat mouse keluar  
+    carousel.addEventListener('mouseleave', () => {  
+        interval = setInterval(nextSlide, intervalTime);  
+    });  
 });

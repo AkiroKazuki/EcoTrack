@@ -516,9 +516,50 @@ input:checked + .slider:before {
 }
 
 /* Carousel (Image Slider) */
-.carousel {
-  flex: 1;
-  max-width: 50%; /* Set max width for responsiveness */
+.carousel {  
+  width: 400px;
+  height: 600px;
+  border: 5px solid green;
+  border-radius: 10px;
+  overflow: hidden; /* Sembunyikan bagian gambar yang melampaui */  
+  transition: transform 0.3s ease;
+  margin-right: 20px;
+}  
+
+/* Hapus margin dari carousel terakhir */  
+.carousel:last-child {  
+  margin-right: 0; /* Tanggalkan margin kanan pada carousel terakhir */  
+}  
+.carousel1 {  
+  width: 400px;
+  height: 500px;
+  border: 5px solid green;
+  border-radius: 10px;
+  overflow: hidden; /* Sembunyikan bagian gambar yang melampaui */  
+  transition: transform 0.3s ease;
+  margin-right: 20px;
+}  
+
+/* Hapus margin dari carousel terakhir */  
+.carousel1:last-child {  
+  margin-right: 0; /* Tanggalkan margin kanan pada carousel terakhir */  
+}  
+/* Efek Hover */  
+.carousel:hover {  
+  transform: scale(1.05);
+}  
+
+/* gambar di dlm carousel */
+.carousel-item img {  
+  width: 100%;
+  height: auto;
+} 
+.carousel1:hover {  
+  transform: scale(1.05);
+}  
+
+.carousel-item img {  
+  width: 100%;
   height: auto;
 }
 
@@ -536,3 +577,4 @@ input:checked + .slider:before {
       text-align: center; /* Center the text on smaller screens */
   }
 }
+
