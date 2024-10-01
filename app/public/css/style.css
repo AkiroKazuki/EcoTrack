@@ -409,6 +409,11 @@ footer {
   #about-us .contact .email {
     font-size: 0.7rem;
   }
+
+  #section1 .text h1 {
+    font-size: 4em;
+    padding-left: 0 !important;
+  }
 }
 
 /* Light mode dan dark mode */
@@ -494,7 +499,6 @@ input:checked + .slider:before {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  height: 100vh; /* Full-screen height */
 }
 .container-s1-2 {
   padding-left: 80px;
@@ -516,38 +520,61 @@ input:checked + .slider:before {
 }
 
 /* Carousel (Image Slider) */
-#section1 .carousel,
-#section1 .carousel1 {
-  width: 400px;
-  height: 600px;
-  overflow: hidden; /* Sembunyikan bagian gambar yang melampaui */
-  transition: transform 0.3s ease;
-  margin-right: 20px;
-}
-
-#section1 .carousel1 {
-  width: 400px;
-  height: 500px;
-}
-
-/* Hapus margin dari carousel terakhir */
-.carousel:last-child,
-.carousel1:last-child {
-  margin-right: 0; /* Tanggalkan margin kanan pada carousel terakhir */
-}
-
-/* Efek Hover */
-#section1 .carousel:hover,
-#section1 .carousel1:hover {
-  transform: scale(1.05);
-}
-
-/* gambar di dlm carousel */
-#section1 .carousel-item img {
-  width: 100%;
+#carousel-section1 {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
   height: auto;
-  border: 5px solid green;
+  margin-left: 10px;
+}
+
+#carousel-section1 .img-move {
+  transition: transform 0.3s ease;
+  margin-left: 30px;
+  display: inline-block;
+  padding: 10vh 0;
+  /* nanti diisi patern */
+  /* background-image: ;  */
+}
+
+#carousel-section1::before,
+#carousel-section1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 10%;
+  height: 100%;
+  z-index: 99;
+}
+
+/* #carousel-section1::before {
+  left: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), var(--hijaulime));
+}
+
+#carousel-section1::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--hijaulime)); */
+/* } */
+
+#carousel-section1 .img-move img {
+  width: 300px;
   border-radius: 10px;
+  margin: 0 10px;
+  animation: 20s slide infinite linear;
+  border-radius: 20px;
+  border: 2px solid var(--hijaulime);
+}
+
+/* keyframe */
+@keyframes slide {
+  form {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-778%);
+  }
 }
 
 /* Media Queries for Smaller Screens */
