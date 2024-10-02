@@ -1,26 +1,26 @@
 /* Section 1 */
-.container-1 {
+#section1 .container-1 {
   background-color: #232e26;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
 }
-.container-s1-2 {
+#section1 .container-s1-2 {
   padding-left: 80px;
   flex: 1;
 }
-.s1-text1 {
+#section1 .s1-text1 {
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
   font-size: 96px;
 }
-.s1-text2 {
+#section1 .s1-text2 {
   color: #7ed957;
   font-size: 96px;
 }
-.s1-p1 {
+#section1 .s1-p1 {
   font-size: 32px;
   padding-top: 60px;
 }
@@ -54,10 +54,10 @@
   z-index: 99;
 }
 
-.carousel-section1 img {
+#section1 .carousel-section1 img {
   transition: transform 0.3s ease; /* Transisi untuk efek upscale */
 }
-.carousel-section1 img:hover {
+#section1 .carousel-section1 img:hover {
   transform: scale(1.2); /* Efek upscale saat hover */
 }
 
@@ -85,15 +85,15 @@
 }
 
 @media (max-width: 768px) {
-  .container-1 {
+  #section1 .container-1 {
     flex-direction: column; /* Stack content vertically on small screens */
   }
 
-  .carousel {
+  #section1 .carousel {
     max-width: 100%; /* Full width for carousel on smaller screens */
   }
 
-  .container-s1-2 {
+  #section1 .container-s1-2 {
     text-align: center; /* Center the text on smaller screens */
   }
 }

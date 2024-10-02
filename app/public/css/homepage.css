@@ -74,20 +74,7 @@
   color: var(--abugelap);
 }
 
-.description .icon-link:hover {
+#homepage .description .icon-link:hover {
   color: var(--hijaulime) !important;
-}
-
-.scroll {
-  bottom: 0;
-  left: 50%;
-  color: rgba(255, 255, 255, 0);
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: var(--hijaumuda);
-}
-
-.scroll:hover {
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--hijaumuda);
 }
 /* homepage end */

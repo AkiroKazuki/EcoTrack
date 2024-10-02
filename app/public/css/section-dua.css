@@ -19,7 +19,7 @@
   padding: 0;
   font-size: 73px;
 }
-.custom-question {
+#section2 .custom-question {
   color: #d8efdd;
   font-size: 73px;
   padding: 0;
@@ -29,7 +29,7 @@
   margin-bottom: 20px;
 }
 
-.custom-card {
+#section2 .custom-card {
   border: none;
   border-radius: 15px;
   color: #7ed957;
@@ -39,22 +39,23 @@
   margin-top: 20px;
 }
 
-.custom-card:hover {
+#section2 .custom-card:hover {
   transform: scale(1.05);
 }
 
-.custom-card h3 {
+#section2 .custom-card h3 {
   font-size: 2rem;
   margin: 0;
   font-size: 40px;
 }
 
-.custom-card p {
+#section2 .custom-card p {
   margin: 0;
   margin-top: 20px;
   font-size: 23px;
 }
-.img-fluid {
+
+#section2 .img-fluid {
   max-width: 100%;
   height: auto;
   margin-right: 150px;
