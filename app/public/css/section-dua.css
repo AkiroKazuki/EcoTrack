@@ -1,25 +1,64 @@
 .bg-dark {
-     background-color: var(--abugelap);
+  background-color: var(--abugelap);
+}
+.position {
+     margin-top: 15%;
 }
 .s2-p1 {
-     color: #d8efdd;
+  color: #d8efdd;
+  font-size: 22px;
+  margin-bottom: 20px;
 }
 .s2-txt1 {
-	-webkit-text-stroke: 1.6px #7ed957;
-	color: transparent;
-	font-size: 75px;
-	font-family: Arial Black, Gadget, sans-serif;
+  -webkit-text-stroke: 1.6px #7ed957;
+  color: transparent;
+  font-size: 75px;
+  font-family: Arial Black, Gadget, sans-serif;
 }
 .s2-txt2 {
-     color: #d8efdd;
-     margin: 0;
-     padding: 0;
-     font-size: 73px;
+  color: #d8efdd;
+  margin: 0;
+  padding: 0;
+  font-size: 73px;
 }
 .custom-question {
-     color: #d8efdd;
-     font-size: 73px;
-     padding: 0;
-     margin: 0;
+  color: #d8efdd;
+  font-size: 73px;
+  padding: 0;
+  margin: 0;
 }
-.s2-h1 {}
+.s2-h1 {
+     margin-bottom: 20px;
+}
+
+.custom-card {
+  border: none;
+  border-radius: 15px;
+  color: #7ed957;
+  padding: 20px;
+  transition: transform 0.2s;
+  min-height: 200px;
+  margin-top: 20px;
+}
+
+.custom-card:hover {
+  transform: scale(1.05);
+}
+
+.custom-card h3 {
+  font-size: 2rem;
+  margin: 0;
+  font-size: 40px;
+}
+
+.custom-card p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 23px;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin-right: 150px;
+  margin-left: 0;
+}
