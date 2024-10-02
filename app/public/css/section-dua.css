@@ -1,9 +1,7 @@
 .bg-dark {
   background-color: var(--abugelap);
 }
-.position {
-     margin-top: 15%;
-}
+
 .s2-p1 {
   color: #d8efdd;
   font-size: 22px;
@@ -28,7 +26,7 @@
   margin: 0;
 }
 .s2-h1 {
-     margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .custom-card {
