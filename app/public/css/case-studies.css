@@ -1,0 +1,49 @@
+#section4 .left .title h5 {
+  color: var(--hijaulime);
+}
+
+#section4 .left .title span {
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--hijaumuda);
+  font-size: 4em;
+  font-weight: bold;
+}
+
+#section4 .left .title .text-end {
+  background-color: var(--hijaulime);
+  color: var(--abugelap);
+  margin-left: 5em;
+  padding: 5px;
+}
+
+#section4 .custom-card {
+  background-color: var(--gray);
+  border: none;
+  border-radius: 15px;
+  color: #7ed957;
+  padding: 0 5px;
+  transition: transform 0.2s;
+  min-height: 100px;
+  margin-top: 20px;
+}
+
+#section4 .custom-card:hover {
+  transform: scale(1.05);
+}
+
+#section4 .custom-card h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+#section4 .custom-card p {
+  margin: 0;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+#section4 .left .text span,
+#section4 .right .custom-card span {
+  color: var(--hijaulime);
+}

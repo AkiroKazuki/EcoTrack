@@ -8,6 +8,7 @@
   --hitam: #000000;
   --hijaudaun: #7ed957;
   --gray: #38443c;
+  --bg-ptrn-dark: url(../img/Section-bg.svg);
 }
 
 [data-theme="dark"] {
@@ -30,11 +31,18 @@
 body {
   font-family: monospace;
   box-sizing: border-box;
-  background-image: url(../img/Section-bg.svg);
+  background-image: var(--bg-ptrn-dark);
+  background-color: var(--abugelap);
   overflow-x: hidden;
   color: var(--font-color);
   line-height: 1.5;
 }
+
+section {
+  background-color: var(--abugelap);
+  background-image: var(--bg-ptrn-dark);
+}
+
 .height-100vh {
   height: 100vh;
 }
