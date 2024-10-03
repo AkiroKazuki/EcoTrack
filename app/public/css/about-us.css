@@ -73,6 +73,26 @@
   z-index: 1;
 }
 
+#about-us .this-web .row .logo {
+  width: 200px;
+  height: 200px;
+  background-image: url(../img/dolphin.jpg);
+  animation: 2s spin forwards;
+}
+
+@keyframes spin {
+  0% {
+    scale: 0.5;
+  }
+  50% {
+    scale: 1;
+  }
+  100% {
+    border-radius: 50%;
+    transform: rotate(360deg);
+  }
+}
+
 #about-us .carousel-item .team .rounded-circle {
   background-color: var(--hijaumuda);
   border: 3px solid var(--hijaumuda);
