@@ -31,6 +31,7 @@ body {
   font-family: monospace;
   box-sizing: border-box;
   background-image: url(../img/Section-bg.svg);
+  background-color: var(--abugelap);
   overflow-x: hidden;
   color: var(--font-color);
   line-height: 1.5;
