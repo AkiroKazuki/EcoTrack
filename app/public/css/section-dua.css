@@ -8,7 +8,7 @@
   margin-bottom: 20px;
 }
 .s2-txt1 {
-  -webkit-text-stroke: 1.6px #7ed957;
+  -webkit-text-stroke: 1.6px var(--hijaulime);
   color: transparent;
   font-size: 75px;
   font-family: Arial Black, Gadget, sans-serif;
@@ -32,15 +32,43 @@
 #section2 .custom-card {
   border: none;
   border-radius: 15px;
-  color: #7ed957;
-  padding: 20px;
+  color: var(--hijaulime);
+  background-color: var(--gray);
   transition: transform 0.2s;
   min-height: 200px;
   margin-top: 20px;
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+#section2 .custom-card::after,
+#section2 .custom-card::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  background-image: conic-gradient(from var(--angle), transparent 70%, #ffffff, #7ed957, #87ceeb);
+  padding: 103px 117px;
+  border-radius: 15px;
+  animation: 3s spin linear infinite;
+}
+
+#section2 .custom-card::before {
+  filter: blur(1.5rem);
+  opacity: 0.5;
 }
 
 #section2 .custom-card:hover {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 #section2 .custom-card h3 {
@@ -60,4 +88,13 @@
   height: auto;
   margin-right: 150px;
   margin-left: 0;
+}
+
+@keyframes spin {
+  form {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
 }
