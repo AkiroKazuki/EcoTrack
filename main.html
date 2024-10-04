@@ -30,11 +30,17 @@
           <h1 class="navbar-brand">
           <a href="index.html" class="nav-link fw-bold fs-3" style="color: var(--abugelap);">EcoTrack</a>
           </h1>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler justify-content-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse d-lg-flex justify-content-lg-end" id="navbarNav">
+          <div class="collapse navbar-collapse d-lg-flex justify-content-end justify-content-lg-center" id="navbarNav">
             <ul class="navbar-nav ps-3" style="background-color: var(--hijaumuda);">
+              <div class="theme-switch-wrapper d-lg-none">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round"></div>
+                </label>
+              </div>
               <li class="nav-item">
                 <a class="nav-link" href="#section1" style="color: var(--abugelap);">Nature overview</a>
               </li>
@@ -45,6 +51,12 @@
                 <a class="nav-link" href="#section5" style="color: var(--abugelap);">Get Involved</a>
               </li>
             </ul>
+          </div>
+          <div class="theme-switch-wrapper d-none d-lg-inline-block">
+            <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkboxSecond" />
+                <div class="slider round"></div>
+            </label>
           </div>
         </div>
       </nav>
