@@ -30,7 +30,7 @@
 body {
   font-family: monospace;
   box-sizing: border-box;
-  background-image: url(../img/Section-bg.svg);
+  background-image: url(../bg-img/Section-bg.svg);
   background-color: var(--abugelap);
   overflow-x: hidden;
   color: var(--font-color);
@@ -142,6 +142,8 @@ header {
 }
 section {
   padding: 60px 0;
+  background-image: url(../bg-img/Section-bg.svg);
+  background-color: var(--abugelap);
 }
 section.bg-light {
   background-color: #e8f6ef;
