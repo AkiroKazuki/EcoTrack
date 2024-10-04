@@ -49,7 +49,7 @@
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid;
-  animation: typing 6s steps(8) forwards, blink 1s step-end infinite;
+  animation: typing 4s steps(8) forwards, blink 1s step-end infinite;
 }
 
 @keyframes typing {
@@ -90,6 +90,7 @@
   background-color: var(--abugelap);
   color: var(--hijaulime);
   box-shadow: 0 0 5px var(--abugelap), 0 0 25px var(--abugelap);
+  animation: zoom 5s ease infinite;
 }
 
 .container-homepage .text .btn:hover {
@@ -98,7 +99,44 @@
   box-shadow: 0 0 5px var(--hijaulime), 0 0 25px var(--hijaulime), 0 0 50px var(--hijaulime), 0 0 100px var(--hijaulime);
 }
 
+@keyframes zoom {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+}
+
+.homepage .description .icon-link {
+  position: relative;
+  padding: 4px 10px;
+  transition: transform 0.1s ease;
+}
+
+.homepage .description .icon-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: var(--abugelap);
+  opacity: 0.3;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+}
+
 #homepage .description .icon-link:hover {
   color: var(--hijaulime) !important;
+  transform: translateY(-2px);
 }
 /* homepage end */
