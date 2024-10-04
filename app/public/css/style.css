@@ -120,6 +120,14 @@ input:checked + .slider:before {
 }
 /* light dark mode end */
 
+.main-navbar .navbar-brand {
+  transition: transform 0.4s;
+}
+
+.main-navbar .navbar-brand:hover {
+  transform: scale(1.2);
+}
+
 .main-navbar nav ul a:hover {
   color: var(--hijaulime) !important;
 }
@@ -141,5 +149,5 @@ section.bg-light {
 footer {
   background-color: #354f52;
   color: #fff;
-  padding: 30px 0;
+  padding: 20px 0;
 }

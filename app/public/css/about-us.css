@@ -76,8 +76,7 @@
 #about-us .this-web .row .logo {
   width: 200px;
   height: 200px;
-  background-image: url(../img/dolphin.jpg);
-  animation: 2s spin forwards;
+  animation: 4s spin forwards;
 }
 
 @keyframes spin {
