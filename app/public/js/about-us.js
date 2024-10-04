@@ -16,6 +16,38 @@ function changeColor(element) {
   element.parentElement.classList.add("active");
 }
 
+// AOS at team
+document.getElementById("triggerBtnAosTeam").addEventListener("click", function () {
+  var dode = document.querySelector(".profilDode");
+  var gungwah = document.querySelector(".profilGungwah");
+
+  dode.classList.remove("aos-animate");
+  gungwah.classList.remove("aos-animate");
+
+  setTimeout(function () {
+    dode.classList.add("aos-animate");
+    gungwah.classList.add("aos-animate");
+    AOS.refresh(); // Reinitialize AOS to run the animation
+  }, 500);
+});
+
+// AOS at contact
+document.getElementById("triggerBtnAosContact").addEventListener("click", function () {
+  var message = document.querySelector(".SendMessage");
+  var wa = document.querySelector(".SendWa");
+  var email = document.querySelector(".SendEmail");
+
+  message.classList.remove("aos-animate");
+  wa.classList.remove("aos-animate");
+  email.classList.remove("aos-animate");
+
+  setTimeout(function () {
+    message.classList.add("aos-animate");
+    wa.classList.add("aos-animate");
+    email.classList.add("aos-animate");
+    AOS.refresh(); // Reinitialize AOS to run the animation
+  }, 500);
+});
 // contact form
 const scriptURL = "https://script.google.com/macros/s/AKfycbyD_xi757IjUEU_t-v42Mzl4CrJcqMHzI2InAkPbp9zp7Xg_DFxvVJ_Gyqx2Jr7Zm4/exec";
 const form = document.forms["dode-contact-form"];
