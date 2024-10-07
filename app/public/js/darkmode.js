@@ -1,12 +1,12 @@
 const checkbox = document.getElementById("checkbox");
-const secondCheckbox = document.getElementById("checkboxSecond");
+const checkboxSecond = document.getElementById("checkboxSecond");
 
 // update switch
 const setTheme = (theme) => {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
   checkbox.checked = theme === "dark"; // update switch berdasarkan tema yang dpilih
-  secondCheckbox.checked = theme === "dark"; // update switch berdasarkan tema yang dpilih
+  checkboxSecond.checked = theme === "dark"; // update switch berdasarkan tema yang dpilih
 };
 
 // local storage check
@@ -23,8 +23,8 @@ checkbox.addEventListener("change", () => {
   const theme = checkbox.checked ? "dark" : "light";
   setTheme(theme);
 });
-secondCheckbox.addEventListener("change", () => {
-  const theme = secondCheckbox.checked ? "dark" : "light";
+checkboxSecond.addEventListener("change", () => {
+  const theme = checkboxSecond.checked ? "dark" : "light";
   setTheme(theme);
 });
 

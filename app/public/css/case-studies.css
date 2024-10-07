@@ -1,11 +1,11 @@
 #section4 .left .title h5 {
-  color: var(--hijaulime);
+  color: var(--section2);
 }
 
 #section4 .left .title span {
   color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: var(--hijaumuda);
+  -webkit-text-stroke-color: var(--heading);
   font-size: 4em;
   font-weight: bold;
 }

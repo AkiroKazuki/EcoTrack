@@ -56,7 +56,13 @@
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
-  background-image: conic-gradient(from var(--angle), transparent 70%, #ffffff, #7ed957, #87ceeb);
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 70%,
+    #ffffff,
+    #7ed957,
+    #87ceeb
+  );
   padding: 103px 117px;
   border-radius: 15px;
   animation: 3s spin linear infinite;

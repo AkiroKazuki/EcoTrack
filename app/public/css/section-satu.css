@@ -13,11 +13,11 @@
 #section1 .s1-text1 {
   color: transparent;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+  -webkit-text-stroke-color: var(--heading);
   font-size: 96px;
 }
 #section1 .s1-text2 {
-  color: #7ed957;
+  color: var(--section1);
   font-size: 96px;
 }
 #section1 .s1-p1 {

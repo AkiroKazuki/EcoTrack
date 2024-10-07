@@ -12,34 +12,38 @@
 
 [data-theme="dark"] {
   --font-color: #e1e1ff;
-  --bg-color: #161625;
-  --bg-image: url('../bg-img/Section-bg.svg');
-  --heading-color: #818cab;
+  --bg-color: #232e26;
+  --bg-image: url("../bg-img/Section-bg.svg");
+  --heading: #fff;
   --highlight: #7ed957;
   --navbar: #d8efdd;
   --navbar-header: #232e26;
   --text-color: #d8efdd;
   --icon-color: #d8efdd;
+  --section1: #7ed957;
+  --section2: #7ed957;
 }
 
 [data-theme="light"] {
-  --font-color: #333; /* Ganti dengan warna font terang */
-  --bg-color: #ffffff; /* Ganti dengan warna latar belakang terang */
-  --bg-image: url('../bg-img/Section-bg-1.svg');
-  --heading-color: #000; /* Ganti dengan warna heading terang */
+  --font-color: #333;
+  --bg-color: #d8efdd;
+  --bg-image: url("../bg-img/Section-bg-1.svg");
+  --heading: #000;
   --highlight: #f1c40f;
   --navbar: #232e26;
   --navbar-header: #d8efdd;
   --text-color: #232e26;
   --icon-color: #232e26;
+  --section1: #1d5e02;
+  --section2: #000;
 }
 
 /* Custom styles for softer colors and improved layout */
 body {
   font-family: monospace;
   box-sizing: border-box;
-  background-image: var(--bg-image);
-  background-color: var(--abugelap);
+  /* background-image: var(--bg-image); */
+  background-color: var(--bg-color);
   overflow-x: hidden;
   color: var(--font-color);
   line-height: 1.5;
@@ -58,7 +62,7 @@ body {
 
 #spinner.hide {
   opacity: 0;
-  visibility: hidden; /* Menyembunyikan spinner */
+  visibility: hidden;
 }
 .top-50 {
   top: 50%;
@@ -100,7 +104,8 @@ body {
 }
 
 .slider:before {
-  background: #fff url("https://img.icons8.com/emoji/48/sun-emoji.png") no-repeat center center;
+  background: #fff url("https://img.icons8.com/emoji/48/sun-emoji.png")
+    no-repeat center center;
   bottom: 4px;
   content: "";
   height: 26px;
@@ -116,7 +121,8 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(26px);
-  background: #fff url("https://img.icons8.com/emoji/48/new-moon-emoji.png") no-repeat center center;
+  background: #fff url("https://img.icons8.com/emoji/48/new-moon-emoji.png")
+    no-repeat center center;
 }
 
 .slider.round {
@@ -150,8 +156,8 @@ header {
 }
 section {
   padding: 60px 0;
-  background-image: var(--bg-image);
-  background-color: var(--abugelap);
+  /* background-image: var(--bg-image); */
+  /* background-color: var(--bg-color); */
 }
 section.bg-light {
   background-color: #e8f6ef;
