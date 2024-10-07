@@ -19,7 +19,7 @@
 
 #about-us .indicators {
   margin-left: 37.5vw;
-  width: calc(720px / 4);
+  width: calc(720px / 4 + 2rem);
   display: flex;
   align-items: center;
   position: relative;
