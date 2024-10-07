@@ -6,7 +6,7 @@ const setTheme = (theme) => {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
   checkbox.checked = theme === "dark"; // update switch berdasarkan tema yang dpilih
-  checkboxSecond.checked = theme === "dark"; // update switch berdasarkan tema yang dpilih
+  // checkboxSecond.checked = theme === "dark";
 };
 
 // local storage check
