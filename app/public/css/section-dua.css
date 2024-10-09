@@ -56,14 +56,8 @@
   left: 50%;
   translate: -50% -50%;
   z-index: -1;
-  background-image: conic-gradient(
-    from var(--angle),
-    transparent 70%,
-    #ffffff,
-    #7ed957,
-    #87ceeb
-  );
-  padding: 103px 117px;
+  background-image: conic-gradient(from var(--angle), transparent 70%, #ffffff, #7ed957, #87ceeb);
+  padding: 45% 51%;
   border-radius: 15px;
   animation: 3s spin linear infinite;
 }
@@ -98,5 +92,12 @@
   }
   to {
     --angle: 360deg;
+  }
+}
+
+@media (max-width: 768px) {
+  #section2 .custom-card::after,
+  #section2 .custom-card::before {
+    padding: 20% 50%;
   }
 }
