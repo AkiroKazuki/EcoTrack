@@ -95,9 +95,25 @@
   }
 }
 
+@media (max-width: 992px) {
+  #section2 .img-fluid {
+    height: 30%;
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 768px) {
   #section2 .custom-card::after,
   #section2 .custom-card::before {
     padding: 20% 50%;
+  }
+
+  .s2-p1 {
+    font-size: 1rem;
+  }
+
+  #section2 .custom-card {
+    margin-left: 20%;
+    width: 75vw;
   }
 }

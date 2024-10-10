@@ -21,7 +21,6 @@
   font-size: 96px;
 }
 #section1 .s1-p1 {
-  font-size: 32px;
   padding-top: 0px;
 }
 
@@ -102,9 +101,12 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #section1 .text h1 {
     font-size: 4em;
     padding-left: 0 !important;
+  }
+  #section1 .s1-p1 {
+    font-size: 1.25rem !important;
   }
 }

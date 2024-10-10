@@ -50,7 +50,7 @@ body {
   min-height: 100vh;
 }
 .height-100vh {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 /* Spinner */
@@ -160,8 +160,4 @@ footer {
   background-color: #354f52;
   color: #fff;
   padding: 20px 0;
-  /* style untuk footer homepage */
-  bottom: 0;
-  right: 0;
-  left: 0;
 }
