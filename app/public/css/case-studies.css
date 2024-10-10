@@ -47,3 +47,22 @@
 #section4 .right .custom-card span {
   color: var(--highlight);
 }
+
+@media (max-width: 992px) {
+  #section4 .left .text {
+    margin-top: 20px;
+    left: 0% !important;
+  }
+  #section4 .left .svg {
+    position: relative !important;
+  }
+}
+
+@media (max-width: 768px) {
+  #section4 .left .title h5 {
+    font-size: 1rem !important;
+  }
+  #section4 .left .text {
+    font-size: 0.75rem;
+  }
+}
