@@ -92,6 +92,10 @@
   }
 }
 
+#about-us .this-web .text span {
+  color: var(--highlight);
+}
+
 #about-us .carousel-item .team .rounded-circle {
   background-color: var(--hijaumuda);
   border: 3px solid var(--hijaumuda);
