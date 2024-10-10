@@ -62,12 +62,18 @@
 }
 
 /* responsif breakpoint */
-@media (max-width: 850px) {
+@media (max-width: 992px) {
+  #section5 .main-title {
+    font-size: 1.5em;
+  }
 }
 
 @media (max-width: 768px) {
   #section5 .carousel {
     max-width: 100%; /* Full width for carousel on smaller screens */
+  }
+  #section5 .description {
+    font-size: 1rem;
   }
 }
 
