@@ -47,6 +47,7 @@ body {
   overflow-x: hidden;
   color: var(--font-color);
   line-height: 1.5;
+  min-height: 100vh;
 }
 .height-100vh {
   height: 100vh;
@@ -159,4 +160,8 @@ footer {
   background-color: #354f52;
   color: #fff;
   padding: 20px 0;
+  /* style untuk footer homepage */
+  bottom: 0;
+  right: 0;
+  left: 0;
 }

@@ -76,7 +76,7 @@
 }
 
 .homepage .title .text h1 {
-  font-size: 4rem !important;
+  font-size: 4rem;
   color: var(--hijaumuda);
   letter-spacing: 5px;
   -webkit-text-stroke-width: 2px;
@@ -140,3 +140,18 @@
   transform: translateY(-2px);
 }
 /* homepage end */
+
+@media (max-width: 768px) {
+  .homepage .offcanvas {
+    width: 75% !important;
+  }
+
+  .homepage .title .text h1 {
+    font-size: 3em;
+  }
+
+  .container-homepage .text .btn {
+    margin-top: 5vh !important;
+    padding: 4vw;
+  }
+}

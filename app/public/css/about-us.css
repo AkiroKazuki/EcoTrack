@@ -113,7 +113,7 @@
 /* about us end */
 
 /* responsif breakpoint */
-@media (max-width: 850px) {
+@media (max-width: 992px) {
   #about-us nav h1 {
     font-size: 3em !important;
   }
@@ -155,7 +155,7 @@
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   #about-us nav h1 {
     font-size: 2em !important;
   }
@@ -207,11 +207,10 @@
   }
 
   #about-us .contact .via {
-    margin-top: 1em;
-    width: 50vw;
-  }
-
-  #about-us .contact .email {
+    margin: 1em 2.5em !important;
     font-size: 0.7rem;
+  }
+  #about-us .contact .via .SendEmail {
+    margin-top: 1em;
   }
 }
