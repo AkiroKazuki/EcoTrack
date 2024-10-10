@@ -108,12 +108,17 @@
     padding: 20% 50%;
   }
 
+  #section2 h1 span,
+  #section2 h1 .custom-question {
+    font-size: 3rem;
+  }
+
   .s2-p1 {
     font-size: 1rem;
   }
 
   #section2 .custom-card {
-    margin-left: 20%;
+    margin-left: 10%;
     width: 75vw;
   }
 }
