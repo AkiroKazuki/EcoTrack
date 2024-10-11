@@ -36,28 +36,29 @@
 // });
 
 
-const checkbox = document.getElementById("checkbox");
-const satelliteImage = document.getElementById("satellite-image");
+const checkbox = document.getElementById("checkbox") || document.getElementById("checkboxSecond");
+const checkboxSecond = document.getElementById("checkboxSecond");
+const satelliteImage = document.getElementById("satellite-image"); // Only on main.html
 
 // Function to set the theme and update localStorage
 const setTheme = (theme) => {
   document.documentElement.setAttribute("data-theme", theme);
   localStorage.setItem("theme", theme);
-  checkbox.checked = theme === "dark";
 
-  // Log to check if the image is updating correctly
-  console.log(`Setting theme to: ${theme}`);
-  
-  // Change the image source based on the theme
-  if (theme === "dark") {
-    satelliteImage.src = "app/public/img/satelit-dark.svg"; // Dark mode image
-    console.log("Dark mode image set.");
-  } else {
-    satelliteImage.src = "app/public/img/satelit-light.svg"; // Light mode image
-    console.log("Light mode image set.");
+  // Update both checkboxes' states
+  const isDarkMode = theme === "dark";
+  if (checkbox) {
+    checkbox.checked = isDarkMode; // For mobile
+  }
+  if (checkboxSecond) {
+    checkboxSecond.checked = isDarkMode; // For desktop
+  }
+
+  // Update the satellite image source if it exists
+  if (satelliteImage) {
+    satelliteImage.src = isDarkMode ? "app/public/img/satelit-dark.svg" : "app/public/img/satelit-light.svg";
   }
 };
-
 
 // Check for a saved theme in localStorage or fallback to system preference
 const savedTheme = localStorage.getItem("theme");
@@ -66,13 +67,20 @@ const currentTheme = savedTheme || (window.matchMedia && window.matchMedia("(pre
 // Set the initial theme
 setTheme(currentTheme);
 
+// Add event listeners for both checkboxes
+if (checkbox) {
+  checkbox.addEventListener("change", () => {
+    const theme = checkbox.checked ? "dark" : "light";
+    setTheme(theme);
+  });
+}
 
-
-// Add an event listener to the switch
-checkbox.addEventListener("change", () => {
-  const theme = checkbox.checked ? "dark" : "light";
-  setTheme(theme);
-});
+if (checkboxSecond) {
+  checkboxSecond.addEventListener("change", () => {
+    const theme = checkboxSecond.checked ? "dark" : "light";
+    setTheme(theme);
+  });
+}
 
 // Update theme based on system preference if no theme is saved
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (event) => {
@@ -81,3 +89,4 @@ window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (ev
     setTheme(newTheme);
   }
 });
+

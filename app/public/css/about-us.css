@@ -50,7 +50,7 @@
 
 #about-us .indicators button {
   border: none;
-  background-color: var(--hijaumuda);
+  background-color: var(--about-us-active3);
   width: 20px;
   height: 20px;
   position: relative;
@@ -64,7 +64,7 @@
   left: 20%;
   right: -10%;
   height: 2px;
-  background-color: var(--hijaumuda);
+  background-color: var(--about-us-slide-name);
   z-index: 0;
 }
 
@@ -97,7 +97,7 @@
 }
 
 #about-us .carousel-item .team .rounded-circle {
-  background-color: var(--hijaumuda);
+  background-color: var(--about-us-active2);
   border: 3px solid var(--hijaumuda);
   box-shadow: 0px 0px 19px var(--hijaulime);
 }

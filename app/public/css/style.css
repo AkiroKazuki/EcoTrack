@@ -25,9 +25,12 @@
   --about-us-s1: #7ed957;
   --about-us-s2: #7ed957;
   --about-us-quote: #7ed957;
-  --about-us-alert: #d8efdd;
+  --about-us-alert: #e6f3e9;
   --about-us-active: #7ed957;
   --about-us-active2: #7ed957;
+  --about-us-active3: #d8efdd;
+  --about-us-slide-name: #d8efdd;
+  --separator: #ccc ;
   --satellite-image: url('../img/satelit.svg');
   --bg-get-involved: url('../bg-img/get-involved-bg-dark.png');
 }
@@ -50,6 +53,9 @@
   --about-us-alert: #666f69;
   --about-us-active: #6e7f76;
   --about-us-active2: #232e26;
+  --about-us-active3: #232e26;
+  --about-us-slide-name: #232e26;
+  --separator: #232e26;
   --satellite-image: url('../img/satelit2.svg');
   --bg-get-involved: url('../bg-img/get-involved-bg-light.png');
 }
