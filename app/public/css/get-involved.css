@@ -84,7 +84,7 @@
 
 @media (max-width: 768px) {
   #section5 .carousel {
-    max-width: 100%; /* Full width for carousel on smaller screens */
+    max-width: 100%;
   }
   #section5 .description {
     font-size: 1rem;

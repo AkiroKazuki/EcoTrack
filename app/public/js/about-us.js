@@ -16,7 +16,7 @@ function changeColor(element) {
   element.parentElement.classList.add("active");
 }
 
-// AOS at team
+// AOS
 document.getElementById("triggerBtnAosTeam").addEventListener("click", function () {
   var dode = document.querySelector(".profilDode");
   var gungwah = document.querySelector(".profilGungwah");
@@ -27,11 +27,11 @@ document.getElementById("triggerBtnAosTeam").addEventListener("click", function 
   setTimeout(function () {
     dode.classList.add("aos-animate");
     gungwah.classList.add("aos-animate");
-    AOS.refresh(); // Reinitialize AOS to run the animation
+    AOS.refresh();
   }, 500);
 });
 
-// AOS at contact
+// AOS di contact
 document.getElementById("triggerBtnAosContact").addEventListener("click", function () {
   var message = document.querySelector(".SendMessage");
   var wa = document.querySelector(".SendWa");
@@ -45,7 +45,7 @@ document.getElementById("triggerBtnAosContact").addEventListener("click", functi
     message.classList.add("aos-animate");
     wa.classList.add("aos-animate");
     email.classList.add("aos-animate");
-    AOS.refresh(); // Reinitialize AOS to run the animation
+    AOS.refresh();
   }, 500);
 });
 // contact form

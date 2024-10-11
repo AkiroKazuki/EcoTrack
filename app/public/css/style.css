@@ -9,7 +9,7 @@
   --hijaudaun: #7ed957;
   --gray: #38443c;
 }
-
+/* darkmode */
 [data-theme="dark"] {
   --font-color: #e1e1ff;
   --bg-color: #232e26;
@@ -36,6 +36,7 @@
   --bg-get-involved: url("../bg-img/get-involved-bg-dark.png");
 }
 
+/* lightmode */
 [data-theme="light"] {
   --font-color: #333;
   --bg-color: #d8efdd;
@@ -62,7 +63,7 @@
   --bg-get-involved: url("../bg-img/get-involved-bg-light.png");
 }
 
-/* Custom styles for softer colors and improved layout */
+
 body {
   font-family: monospace;
   box-sizing: border-box;
@@ -174,8 +175,6 @@ input:checked + .slider:before {
 }
 section {
   padding: 60px 0;
-  /* background-image: var(--bg-image); */
-  /* background-color: var(--bg-color); */
 }
 section.bg-light {
   background-color: #e8f6ef;

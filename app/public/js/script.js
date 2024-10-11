@@ -46,29 +46,25 @@ carousels.forEach((carousel) => {
     interval = setInterval(nextSlide, intervalTime);
   }
 
-  // Inisialisasi interval saat halaman dimuat
   interval = setInterval(nextSlide, intervalTime);
 
-  // Hentikan interval saat hover
   carousel.addEventListener("mouseenter", () => {
     clearInterval(interval);
   });
 
-  // Mulai kembali interval saat mouse keluar
   carousel.addEventListener("mouseleave", () => {
     interval = setInterval(nextSlide, intervalTime);
   });
 
-  // Menambahkan efek upscale pada gambar saat hover
-  const images = carousel.querySelectorAll("img"); // Ambil semua gambar dalam carousel
+  const images = carousel.querySelectorAll("img");
   images.forEach((img) => {
     img.addEventListener("mouseenter", () => {
-      img.style.transform = "scale(1.2)"; // Upscale saat hover
-      img.style.transition = "transform 0.3s ease"; // Transisi untuk efek upscale
+      img.style.transform = "scale(1.2)";
+      img.style.transition = "transform 0.3s ease";
     });
 
     img.addEventListener("mouseleave", () => {
-      img.style.transform = ""; // Reset saat mouse keluar
+      img.style.transform = "";
     });
   });
 });
