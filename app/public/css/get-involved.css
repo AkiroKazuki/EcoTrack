@@ -2,7 +2,18 @@
   width: 100%;
 }
 .section-5 {
+  position: relative;
+}
+.section-5::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: var(--bg-get-involved) center no-repeat;
+  background-size: contain;
+  opacity: 0.25;
 }
 
 #section5 .description {
@@ -79,6 +90,9 @@
     font-size: 1rem;
     margin-left: 0.5em;
     margin-right: 0.5em;
+  }
+  .section-5:before {
+    display: none;
   }
 }
 

@@ -8,19 +8,19 @@
   margin-bottom: 20px;
 }
 .s2-txt1 {
-  -webkit-text-stroke: 1.6px var(--hijaulime);
+  -webkit-text-stroke: 1.6px var(--about-us-active2);
   color: transparent;
   font-size: 75px;
   font-family: Arial Black, Gadget, sans-serif;
 }
 .s2-txt2 {
-  color: #d8efdd;
+  color: var(--nature-s2);
   margin: 0;
   padding: 0;
   font-size: 73px;
 }
 #section2 .custom-question {
-  color: #d8efdd;
+  color: var(--nature-s2);
   font-size: 73px;
   padding: 0;
   margin: 0;
@@ -92,6 +92,12 @@
   }
   to {
     --angle: 360deg;
+  }
+}
+@media (min-width: 1400px) {
+  #section2 .custom-card::after,
+  #section2 .custom-card::before {
+    padding: 38% 51%;
   }
 }
 

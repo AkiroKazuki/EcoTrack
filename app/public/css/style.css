@@ -22,14 +22,15 @@
   --icon-color: #d8efdd;
   --section1: #7ed957;
   --section2: #7ed957;
+  --nature-s2: #d8efdd;
   --about-us-s1: #7ed957;
   --about-us-s2: #7ed957;
   --about-us-quote: #7ed957;
   --about-us-alert: #d8efdd;
   --about-us-active: #7ed957;
   --about-us-active2: #7ed957;
-  --satellite-image: url('../img/satelit.svg');
-  --bg-get-involved: url('../bg-img/get-involved-bg-dark.png');
+  --satellite-image: url("../img/satelit.svg");
+  --bg-get-involved: url("../bg-img/get-involved-bg-dark.png");
 }
 
 [data-theme="light"] {
@@ -44,14 +45,15 @@
   --icon-color: #232e26;
   --section1: #1d5e02;
   --section2: #000;
+  --nature-s2: #1d5e02;
   --about-us-s1: #232e26;
   --about-us-s2: #6e7f76;
   --about-us-quote: #1a3c6c;
   --about-us-alert: #666f69;
   --about-us-active: #6e7f76;
   --about-us-active2: #232e26;
-  --satellite-image: url('../img/satelit2.svg');
-  --bg-get-involved: url('../bg-img/get-involved-bg-light.png');
+  --satellite-image: url("../img/satelit2.svg");
+  --bg-get-involved: url("../bg-img/get-involved-bg-light.png");
 }
 
 /* Custom styles for softer colors and improved layout */
@@ -121,8 +123,7 @@ body {
 }
 
 .slider:before {
-  background: #fff url("https://img.icons8.com/emoji/48/sun-emoji.png")
-    no-repeat center center;
+  background: #fff url("https://img.icons8.com/emoji/48/sun-emoji.png") no-repeat center center;
   bottom: 4px;
   content: "";
   height: 26px;
@@ -138,8 +139,7 @@ input:checked + .slider {
 
 input:checked + .slider:before {
   transform: translateX(26px);
-  background: #fff url("https://img.icons8.com/emoji/48/new-moon-emoji.png")
-    no-repeat center center;
+  background: #fff url("https://img.icons8.com/emoji/48/new-moon-emoji.png") no-repeat center center;
 }
 
 .slider.round {
