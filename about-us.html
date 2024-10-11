@@ -24,22 +24,21 @@
 <!-- Spinner End -->
 
     <!-- section -->
-    <section id="about-us" class="about-us">
+    <section id="about-us" class="about-us" style="background-color: var(--bg-color);">
       <nav class="navbar navbar-expand-lg" data-aos="fade-down" data-aos-delay="500"> 
         <div class="container">
           <h1 class="navbar-brand fw-bold text-uppercase mt-3" style="font-size: 4em; "><span style="border-bottom: 5px solid var(--about-us-s1);">who</span> we are</h1>
           <div class="nav-right d-flex align-items-center">
             <a href="index.html" class="nav-link me-3">
-              <i class="bi bi-house-fill fs-1" style="transition: 0.3s ease;"></i>
+              <i class="bi bi-house-fill fs-1" style="transition: 0.3s ease; color: var(--heading);"></i>
             </a>
-                <!-- switch -->
-                <div class="theme-switch-wrapper">
-                  <label class="theme-switch" for="checkbox">
-                    <input type="checkbox" id="checkbox" />
-                    <div class="slider round"></div>
-                  </label>
-                </div>
-                
+            <!-- Switch -->
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="slider round"></div>
+              </label>
+            </div>
           </div>
         </div>
       </nav>
@@ -47,15 +46,15 @@
       <div id="carouselExampleIndicators" class="carousel slide" data-aos="zoom-in" data-aos-delay="500">
         <!-- indicator -->
         <div class="indicators d-flex justify-content-between">
-          <div class="indicator-button active" style="color: var(--hijaumuda);">
+          <div class="indicator-button active" style="color: var(--about-us-slide-name);">
             <p class="text-center">About <br>this web</p>
             <button type="button" onclick="changeColor(this)" class="rounded-circle" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
           </div>
-          <div class="indicator-button ms-3" style="color: var(--hijaumuda);">
+          <div class="indicator-button ms-3" style="color: var(--about-us-slide-name);">
             <p class="text-center">Met <br>our team</p>
             <button id="triggerBtnAosTeam" type="button" onclick="changeColor(this)" class="rounded-circle" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
           </div>
-          <div class="indicator-button ms-3" style="color: var(--hijaumuda);">
+          <div class="indicator-button ms-3" style="color: var(--about-us-slide-name);">
             <p class="text-center">Contact <br>us</p>
           <button id="triggerBtnAosContact" type="button" onclick="changeColor(this)" class="rounded-circle" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
           </div>
@@ -125,7 +124,7 @@
                     <div class="col-lg-6 mb-md-3">
                       <label for="email" class="form-label">Email</label>
                       <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required/>
-                      <div id="emailHelp" class="form-text opacity-50">We'll never share your email with anyone else.</div>
+                      <div id="emailHelp" class="form-text opacity-50" style="color: var(--about-us-alert);">We'll never share your email with anyone else.</div>
                     </div>
                   </div>
                   <div class=" row mb-3">
@@ -142,7 +141,7 @@
                 </form>
               </div>
               <div class="via col-3 d-none d-lg-flex flex-column justify-content-evenly gap-3 text-wrap" style="margin-left: 5em;">
-                <div class="SendWa row group p-2" data-aos="flip-up" data-aos-delay="200" style="background-color: var(--abuterang); color: var(--hijaumuda); border-radius: 5px;">
+                <div class="SendWa row group p-2" data-aos="flip-up" data-aos-delay="200" style="background-color: var(--abuterang); color: var(--hijaumuda); border-radius: 10px;">
                   <div class="col-3">
                     <i class="bi bi-whatsapp fs-1"></i>
                   </div>
@@ -151,7 +150,7 @@
                     <a href="https://wa.me/62881038508323" class="row nav-link">+62881038508323 (Gung Wah)</a>
                   </div>
                 </div>
-                <div class="SendEmail row p-2" data-aos="flip-up" data-aos-delay="200" style="background-color: var(--abuterang); color: var(--hijaumuda);">
+                <div class="SendEmail row p-2" data-aos="flip-up" data-aos-delay="200" style="background-color: var(--abuterang); color: var(--hijaumuda); border-radius: 10px;">
                   <div class="col-3">
                     <i class="bi bi-envelope fs-1"></i>
                   </div>
