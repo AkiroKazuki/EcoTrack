@@ -7,10 +7,10 @@
   z-index: 1;
 }
 #about-us .navbar-brand {
-  color: var(--abugelap);
+  color: transparent;
   letter-spacing: 5px;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: var(--hijaulime);
+  -webkit-text-stroke-color: var(--about-us-s1) !important;
 }
 
 #about-us .navbar .bi:hover {
@@ -38,14 +38,14 @@
 #about-us .indicators .indicator-button:hover,
 .indicator-button.clicked,
 .indicator-button.active {
-  color: var(--hijaulime) !important;
+  color: var(--about-us-active) !important;
   transform: scale(1.1);
 }
 
 #about-us .indicators .indicator-button:hover button,
 .indicator-button button.clicked,
 .indicator-button.active button {
-  background-color: var(--hijaulime) !important;
+  background-color: var(--about-us-active) !important;
 }
 
 #about-us .indicators button {
@@ -110,7 +110,7 @@
 }
 
 #about-us .contact .form-control {
-  background-color: var(--abuterang);
+  background-color: var(--about-us-alert);
   border: none;
   border-radius: 10px;
 }

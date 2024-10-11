@@ -12,7 +12,7 @@
 }
 #section1 .s1-text1 {
   color: transparent;
-  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-width: 1.5px;
   -webkit-text-stroke-color: var(--heading);
   font-size: 96px;
 }

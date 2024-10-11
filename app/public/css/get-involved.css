@@ -1,6 +1,9 @@
 .container-5 {
   width: 100%;
 }
+.section-5 {
+  background: var(--bg-get-involved) center no-repeat;
+}
 
 #section5 .description {
   font-size: 20px;
